@@ -14,8 +14,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel:'stylesheet', type:'text/css', href:'https://use.fontawesome.com/releases/v5.2.0/css/all.css' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
@@ -30,13 +29,12 @@ module.exports = {
   css: [
     /* Import Font Awesome Icons Set */
     '~/node_modules/flag-icon-css/css/flag-icon.min.css',
-    /* Import Font Awesome Icons Set */
-    // '~/node_modules/@fortawesome/fontawesome/styles.css',
-    '@fortawesome/fontawesome-svg-core/styles.css',
     /* Import Simple Line Icons Set */
     '~/node_modules/simple-line-icons/css/simple-line-icons.css',
     /* Import Bootstrap Vue Styles */
     '~/node_modules/bootstrap-vue/dist/bootstrap-vue.css',
+    /* Import Font Awesome Icons Set */
+    '@fortawesome/fontawesome-svg-core/styles.css',
     /* Import Core SCSS */
     '@/assets/scss/style.scss'
   ],

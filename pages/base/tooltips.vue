@@ -5,7 +5,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Bootstrap Tooltips</strong><small><code>v-b-tooltip</code>directive</small>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Bootstrap Tooltips</strong><small><code>v-b-tooltip</code>directive</small>
           <div class="card-actions">
             <a 
               href="https://bootstrap-vue.js.org/docs/components/tooltip" 
@@ -40,7 +40,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Tooltips</strong><small><code>b-tooltip</code>component</small>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Tooltips</strong><small><code>b-tooltip</code>component</small>
         </div>
         <b-row>
           <b-col 
@@ -75,7 +75,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Tooltips</strong><small><code>show</code>prop</small>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Tooltips</strong><small><code>show</code>prop</small>
         </div>
         <div class="text-center">
           <b-btn 
@@ -96,7 +96,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Tooltips</strong><small><code>open close</code>events</small>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Tooltips</strong><small><code>open close</code>events</small>
         </div>
         <div class="d-flex flex-column text-md-center">
           <div class="p-2">
@@ -124,7 +124,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Tooltips</strong><small><code>enable disable</code>events</small>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Tooltips</strong><small><code>enable disable</code>events</small>
         </div>
         <div class="d-flex flex-column text-md-center">
           <div class="p-2">

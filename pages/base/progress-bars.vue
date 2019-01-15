@@ -5,7 +5,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Bootstrap Progress</strong>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Bootstrap Progress</strong>
           <div class="card-actions">
             <a 
               href="https://bootstrap-vue.js.org/docs/components/progress" 
@@ -43,7 +43,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Progress</strong> <small>labels</small>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Progress</strong> <small>labels</small>
         </div>
         <div>
           <h5>No label</h5>
@@ -83,7 +83,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Progress</strong> <small>width</small>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Progress</strong> <small>width</small>
         </div>
         <div>
           <h5>Default width</h5>
@@ -106,7 +106,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Progress</strong> <small>height</small>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Progress</strong> <small>height</small>
         </div>
         <div>
           <h5>Default height</h5>
@@ -134,7 +134,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Progress</strong> <small>variants</small>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Progress</strong> <small>variants</small>
         </div>
         <div>
           <div 
@@ -156,7 +156,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Progress</strong> <small>striped</small>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Progress</strong> <small>striped</small>
         </div>
         <div>
           <b-progress 
@@ -190,7 +190,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Progress</strong> <small>animated</small>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Progress</strong> <small>animated</small>
         </div>
         <div>
           <b-progress 
@@ -227,7 +227,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Progress</strong> <small>multiple bars</small>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Progress</strong> <small>multiple bars</small>
         </div>
         <div>
           <b-progress 

@@ -7,7 +7,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>Bootstrap Breadcrumb</strong>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Bootstrap Breadcrumb</strong>
               <div class="card-actions">
                 <a 
                   href="https://bootstrap-vue.js.org/docs/components/breadcrumb" 

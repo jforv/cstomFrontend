@@ -536,11 +536,11 @@
             <b-button 
               type="submit" 
               size="sm" 
-              variant="primary"><i class="fa fa-dot-circle-o"/> Submit</b-button>
+              variant="primary"><font-awesome-icon :icon="['far', 'dot-circle']" /> Submit</b-button>
             <b-button 
               type="reset" 
               size="sm" 
-              variant="danger"><i class="fa fa-ban"/> Reset</b-button>
+              variant="danger"><font-awesome-icon :icon="['fas', 'ban']" /> Reset</b-button>
           </div>
         </b-card>
         <b-card>
@@ -568,11 +568,11 @@
             <b-button 
               type="submit" 
               size="sm" 
-              variant="primary"><i class="fa fa-dot-circle-o"/> Submit</b-button>
+              variant="primary"><font-awesome-icon :icon="['far', 'dot-circle']" /> Submit</b-button>
             <b-button 
               type="reset" 
               size="sm" 
-              variant="danger"><i class="fa fa-ban"/> Reset</b-button>
+              variant="danger"><font-awesome-icon :icon="['fas', 'ban']" /> Reset</b-button>
           </div>
         </b-card>
       </b-col>
@@ -607,11 +607,11 @@
             <b-button 
               type="submit" 
               size="sm" 
-              variant="primary"><i class="fa fa-dot-circle-o"/> Submit</b-button>
+              variant="primary"><font-awesome-icon :icon="['far', 'dot-circle']" /> Submit</b-button>
             <b-button 
               type="reset" 
               size="sm" 
-              variant="danger"><i class="fa fa-ban"/> Reset</b-button>
+              variant="danger"><font-awesome-icon :icon="['fas', 'ban']" /> Reset</b-button>
           </div>
         </b-card>
         <b-card>
@@ -644,11 +644,11 @@
             <b-button 
               type="submit" 
               size="sm" 
-              variant="primary"><i class="fa fa-dot-circle-o"/> Submit</b-button>
+              variant="primary"><font-awesome-icon :icon="['far', 'dot-circle']" /> Submit</b-button>
             <b-button 
               type="reset" 
               size="sm" 
-              variant="danger"><i class="fa fa-ban"/> Reset</b-button>
+              variant="danger"><font-awesome-icon :icon="['fas', 'ban']" /> Reset</b-button>
           </div>
         </b-card>
         <b-card 
@@ -737,7 +737,7 @@
             <b-button 
               type="reset" 
               size="sm" 
-              variant="danger"><i class="fa fa-ban"/> Reset</b-button>
+              variant="danger"><font-awesome-icon :icon="['fas', 'ban']" /> Reset</b-button>
           </div>
         </b-card>
         <b-card>
@@ -782,11 +782,11 @@
             <b-button 
               type="submit" 
               size="sm" 
-              variant="primary"><i class="fa fa-dot-circle-o"/> Submit</b-button>
+              variant="primary"><font-awesome-icon :icon="['far', 'dot-circle']" /> Submit</b-button>
             <b-button 
               type="reset" 
               size="sm" 
-              variant="danger"><i class="fa fa-ban"/> Reset</b-button>
+              variant="danger"><font-awesome-icon :icon="['fas', 'ban']" /> Reset</b-button>
           </div>
         </b-card>
       </b-col>
@@ -912,11 +912,11 @@
             <b-button 
               type="submit" 
               size="sm" 
-              variant="success"><i class="fa fa-dot-circle-o"/> Submit</b-button>
+              variant="success"><font-awesome-icon :icon="['far', 'dot-circle']" /> Submit</b-button>
             <b-button 
               type="reset" 
               size="sm" 
-              variant="danger"><i class="fa fa-ban"/> Reset</b-button>
+              variant="danger"><font-awesome-icon :icon="['fas', 'ban']" /> Reset</b-button>
           </div>
         </b-card>
       </b-col>
@@ -968,11 +968,11 @@
             <b-button 
               type="submit" 
               size="sm" 
-              variant="success"><i class="fa fa-dot-circle-o"/> Submit</b-button>
+              variant="success"><font-awesome-icon :icon="['far', 'dot-circle']" /> Submit</b-button>
             <b-button 
               type="reset" 
               size="sm" 
-              variant="danger"><i class="fa fa-ban"/> Reset</b-button>
+              variant="danger"><font-awesome-icon :icon="['fas', 'ban']" /> Reset</b-button>
           </div>
         </b-card>
       </b-col>
@@ -1047,11 +1047,11 @@
             <b-button 
               type="submit" 
               size="sm" 
-              variant="success"><i class="fa fa-dot-circle-o"/> Submit</b-button>
+              variant="success"><font-awesome-icon :icon="['far', 'dot-circle']" /> Submit</b-button>
             <b-button 
               type="reset" 
               size="sm" 
-              variant="danger"><i class="fa fa-ban"/> Reset</b-button>
+              variant="danger"><font-awesome-icon :icon="['fas', 'ban']" /> Reset</b-button>
           </div>
         </b-card>
       </b-col>

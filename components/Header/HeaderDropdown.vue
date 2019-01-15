@@ -14,19 +14,19 @@
       <strong>Account</strong>
     </b-dropdown-header>
     <b-dropdown-item>
-      <i class="fas fa-bell"/> 
+      <font-awesome-icon :icon="['far', 'bell']" /> 
       Updates<b-badge variant="info">{{ itemsCount }}</b-badge>
     </b-dropdown-item>
     <b-dropdown-item>
-      <i class="far fa-envelope"/> 
+      <font-awesome-icon :icon="['far', 'envelope']" /> 
       Messages<b-badge variant="success">{{ itemsCount }}</b-badge>
     </b-dropdown-item>
     <b-dropdown-item>
-      <i class="fa fa-tasks"/> 
+      <font-awesome-icon icon="tasks" /> 
       Tasks<b-badge variant="danger">{{ itemsCount }}</b-badge>
     </b-dropdown-item>
     <b-dropdown-item>
-      <i class="fa fa-comments"/> 
+      <font-awesome-icon :icon="['far', 'comments']" /> 
       Comments<b-badge variant="warning">{{ itemsCount }}</b-badge>
     </b-dropdown-item>
     <b-dropdown-header 
@@ -35,28 +35,29 @@
       <strong>Settings</strong>
     </b-dropdown-header>
     <b-dropdown-item>
-      <i class="fa fa-user"/> 
+      <font-awesome-icon :icon="['far', 'user']" /> 
       Profile
     </b-dropdown-item>
     <b-dropdown-item>
-      <i class="fa fa-wrench"/> 
+      <font-awesome-icon :icon="['fas', 'wrench']" /> 
       Settings
     </b-dropdown-item>
     <b-dropdown-item>
-      <i class="fa fa-usd"/> 
+      <font-awesome-icon :icon="['fas', 'dollar-sign']" /> 
       Payments<b-badge variant="secondary">{{ itemsCount }}</b-badge>
     </b-dropdown-item>
     <b-dropdown-item>
-      <i class="fa fa-file"/> 
+      <font-awesome-icon :icon="['far', 'file']" /> 
       Projects<b-badge variant="primary">{{ itemsCount }}</b-badge>
     </b-dropdown-item>
     <b-dropdown-divider />
     <b-dropdown-item>
-      <i class="fa fa-shield"/> 
+      <font-awesome-icon :icon="['fas', 'shield-alt']" /> 
       Lock Account
     </b-dropdown-item>
     <b-dropdown-item @click="logout">
-      <i class="fa fa-lock"/> Logout
+      <font-awesome-icon :icon="['fas', 'lock']" /> 
+      Logout
     </b-dropdown-item>
   </b-nav-item-dropdown>
 </template>

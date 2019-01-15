@@ -5,7 +5,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Bootstrap Pagination</strong>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Bootstrap Pagination</strong>
           <div class="card-actions">
             <a 
               href="https://bootstrap-vue.js.org/docs/components/pagination" 
@@ -48,7 +48,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Pagination</strong>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Pagination</strong>
           <small>alignment</small>
         </div>
         <div>
@@ -82,7 +82,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Pagination</strong>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Pagination</strong>
           <small>navigation</small>
           <div class="card-actions">
             <a 

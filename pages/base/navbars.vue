@@ -5,7 +5,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Bootstrap Navbar</strong>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Bootstrap Navbar</strong>
           <div class="card-actions">
             <a 
               href="https://bootstrap-vue.js.org/docs/components/navbar" 
@@ -75,7 +75,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Navbar</strong>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Navbar</strong>
           <small>brand</small>
         </div>
         <div>
@@ -99,7 +99,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Navbar</strong>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Navbar</strong>
           <small>text</small>
         </div>
         <div>
@@ -123,7 +123,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Navbar</strong>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Navbar</strong>
           <small>dropdown</small>
         </div>
         <div>
@@ -162,7 +162,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Navbar</strong>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Navbar</strong>
           <small>form</small>
         </div>
         <div>
@@ -186,7 +186,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Navbar</strong>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Navbar</strong>
           <small>input group</small>
         </div>
         <div>

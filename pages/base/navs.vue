@@ -5,7 +5,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Bootstrap Navs</strong>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Bootstrap Navs</strong>
           <div class="card-actions">
             <a 
               href="https://bootstrap-vue.js.org/docs/components/nav" 
@@ -27,7 +27,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Bootstrap Navs</strong> <small>tab style</small>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Bootstrap Navs</strong> <small>tab style</small>
         </div>
         <div>
           <b-nav tabs>
@@ -42,7 +42,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Bootstrap Navs</strong> <small>pill style</small>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Bootstrap Navs</strong> <small>pill style</small>
         </div>
         <div>
           <b-nav pills>
@@ -57,7 +57,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Bootstrap Navs</strong> <small>fill tabs</small>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Bootstrap Navs</strong> <small>fill tabs</small>
         </div>
         <div>
           <b-nav 
@@ -74,7 +74,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Bootstrap Navs</strong> <small>justified tabs</small>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Bootstrap Navs</strong> <small>justified tabs</small>
         </div>
         <div>
           <b-nav 
@@ -91,7 +91,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Bootstrap Navs</strong> <small>dropdown support</small>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Bootstrap Navs</strong> <small>dropdown support</small>
         </div>
         <div>
           <b-nav pills>
@@ -113,7 +113,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Bootstrap Navs</strong> <small>vertical variation</small>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Bootstrap Navs</strong> <small>vertical variation</small>
         </div>
         <div>
           <b-nav 

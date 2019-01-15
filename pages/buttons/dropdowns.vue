@@ -9,7 +9,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>Bootstrap Dropdown</strong>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Bootstrap Dropdown</strong>
               <div class="card-actions">
                 <a 
                   href="https://bootstrap-vue.js.org/docs/components/dropdown" 
@@ -70,7 +70,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>Dropdown</strong> <small>positioning</small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Dropdown</strong> <small>positioning</small>
             </div>
             <div>
               <b-dropdown 
@@ -138,7 +138,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>Dropdown</strong> <small>hidden caret</small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Dropdown</strong> <small>hidden caret</small>
             </div>
             <div>
               <b-dropdown 
@@ -163,7 +163,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>Dropdown</strong> <small>sizing</small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Dropdown</strong> <small>sizing</small>
             </div>
             <div>
               <b-dropdown 
@@ -217,7 +217,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>Dropdown</strong> <small>headers and accessibility</small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Dropdown</strong> <small>headers and accessibility</small>
             </div>
             <div>
               <b-dropdown 
@@ -252,7 +252,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>Dropdown</strong><small><code>variant</code></small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Dropdown</strong><small><code>variant</code></small>
             </div>
             <b-dropdown 
               id="ddown_primary" 

@@ -7,7 +7,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>Bootstrap button group</strong>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Bootstrap button group</strong>
               <div class="card-actions">
                 <a 
                   href="https://bootstrap-vue.js.org/docs/components/button-group" 
@@ -45,7 +45,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>Button group</strong> sizing
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Button group</strong> sizing
             </div>
             <div>
               <b-button-group>
@@ -73,7 +73,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>Button group</strong> dropdown support
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Button group</strong> dropdown support
             </div>
             <div>
               <b-button-group>
@@ -108,7 +108,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>Button group</strong> vertical variation
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Button group</strong> vertical variation
             </div>
             <div>
               <b-button-group vertical>
@@ -124,7 +124,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>Button toolbar</strong> <small>with button groups</small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Button toolbar</strong> <small>with button groups</small>
               <div class="card-actions">
                 <a 
                   href="https://bootstrap-vue.js.org/docs/components/button-toolbar" 

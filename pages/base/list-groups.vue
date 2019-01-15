@@ -7,7 +7,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>Bootstrap list group</strong>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Bootstrap list group</strong>
               <div class="card-actions">
                 <a 
                   href="https://bootstrap-vue.js.org/docs/components/list-group" 
@@ -30,7 +30,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>List group</strong> <small>active items</small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>List group</strong> <small>active items</small>
             </div>
             <b-list-group>
               <b-list-group-item>Cras justo odio</b-list-group-item>
@@ -48,7 +48,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>List group</strong> <small>disabled items</small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>List group</strong> <small>disabled items</small>
             </div>
             <b-list-group>
               <b-list-group-item disabled>Cras justo odio</b-list-group-item>
@@ -64,7 +64,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>List group</strong> <small>actionable items</small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>List group</strong> <small>actionable items</small>
             </div>
             <b-list-group>
               <b-list-group-item href="#some-link">Awesome link</b-list-group-item>
@@ -85,7 +85,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>List group</strong> <small>buttons</small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>List group</strong> <small>buttons</small>
             </div>
             <b-list-group>
               <b-list-group-item button>Button item</b-list-group-item>
@@ -102,7 +102,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>List group</strong> <small>with badges</small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>List group</strong> <small>with badges</small>
             </div>
             <b-list-group>
               <b-list-group-item class="d-flex justify-content-between align-items-center">
@@ -133,7 +133,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>List group</strong> <small>variants</small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>List group</strong> <small>variants</small>
             </div>
             <b-list-group>
               <b-list-group-item>This is a default list group item</b-list-group-item>
@@ -153,7 +153,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>List group</strong> <small>variants active</small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>List group</strong> <small>variants active</small>
             </div>
             <b-list-group>
               <b-list-group-item href="#">This is a default list group item</b-list-group-item>
@@ -191,7 +191,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>List group</strong> <small>inside cards</small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>List group</strong> <small>inside cards</small>
             </div>
             <b-card-group deck>
               <b-card header="<b>Card with list group</b>">
@@ -232,7 +232,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>List group</strong> <small>custom content</small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>List group</strong> <small>custom content</small>
             </div>
             <b-list-group>
               <b-list-group-item 

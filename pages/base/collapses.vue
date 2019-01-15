@@ -9,7 +9,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>Bootstrap Collapse</strong>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Bootstrap Collapse</strong>
               <div class="card-actions">
                 <a 
                   href="https://bootstrap-vue.js.org/docs/components/collapse" 
@@ -45,7 +45,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>Collapse</strong> <small>with<code>v-b-toggle</code>directive</small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Collapse</strong> <small>with<code>v-b-toggle</code>directive</small>
             </div>
             <div>
               <!-- Using modifiers -->
@@ -76,7 +76,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>Collapse</strong> <small>with<code>visibility</code></small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Collapse</strong> <small>with<code>visibility</code></small>
             </div>
             <div>
               <b-btn 
@@ -99,7 +99,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>Collapse</strong> <small>with<code>v-model</code></small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Collapse</strong> <small>with<code>v-model</code></small>
             </div>
             <div>
               <b-btn 
@@ -129,7 +129,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>Collapse</strong> <small>multiple elements</small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Collapse</strong> <small>multiple elements</small>
             </div>
             <div>
               <!-- Single button triggers two b-collapse components -->
@@ -160,7 +160,7 @@
             header-tag="header"
             footer-tag="footer">
             <div slot="header">
-              <i class="fa fa-align-justify"/> <strong>Collapse</strong><small><code>accordion</code>support</small>
+              <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Collapse</strong><small><code>accordion</code>support</small>
             </div>
             <div role="tablist">
               <b-card 

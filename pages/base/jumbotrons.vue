@@ -5,7 +5,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Bootstrap Jumbotron</strong>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Bootstrap Jumbotron</strong>
           <div class="card-actions">
             <a 
               href="https://bootstrap-vue.js.org/docs/components/jumbotron" 
@@ -29,7 +29,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Jumbotron</strong>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Jumbotron</strong>
           <small>with slots</small>
         </div>
         <div>
@@ -59,7 +59,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"/> <strong>Jumbotron</strong>
+          <font-awesome-icon :icon="['fas', 'align-justify']" /> <strong>Jumbotron</strong>
           <small>variants</small>
         </div>
         <div>

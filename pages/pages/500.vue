@@ -11,7 +11,7 @@
           <b-input-group>
             <b-input-group-prepend>
               <b-input-group-text>
-                <i class="fa fa-search"/>
+                <font-awesome-icon :icon="['fas', 'search']" /> 
               </b-input-group-text>
             </b-input-group-prepend>
             <input 
