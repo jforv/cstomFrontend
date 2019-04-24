@@ -10,7 +10,7 @@ config.autoAddCss = false
 
 // You can add your icons directly in this plugin. See other examples for how you
 // can add other styles or just individual icons.
-library.add(fas, far, fas)
+library.add(fas, far, fab)
 
 // Register the component globally
 Vue.component('font-awesome-icon', FontAwesomeIcon)

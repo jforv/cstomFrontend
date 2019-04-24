@@ -14,7 +14,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.7.2/css/all.css' }
     ]
   },
 
@@ -31,20 +32,16 @@ module.exports = {
     '~/node_modules/flag-icon-css/css/flag-icon.min.css',
     /* Import Simple Line Icons Set */
     '~/node_modules/simple-line-icons/css/simple-line-icons.css',
-    /* Import Bootstrap Vue Styles */
-    '~/node_modules/bootstrap-vue/dist/bootstrap-vue.css',
-    /* Import Font Awesome Icons Set */
-    '@fortawesome/fontawesome-svg-core/styles.css',
     /* Import Core SCSS */
-    '@/assets/scss/style.scss'
+    '@/assets/scss/style.scss',
+    /* Import Custom CSS */
+    '@/assets/css/main.css'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-    '~/plugins/fontawesome.js'
-  ],
+  plugins: [],
 
   /*
   ** Nuxt.js modules
@@ -66,13 +63,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    styleResources: {
-      scss: '~/assets/scss/style.scss',
-      options: {
-        // See https://github.com/yenshih/style-resources-loader#options
-        // Except `patterns` property
-      }
-    },
     /*
     ** You can extend webpack config here
     */

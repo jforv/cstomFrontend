@@ -335,9 +335,8 @@
             :checked="true" 
             type="text" 
             variant="info" 
-            on="On" 
-            off="Off"/>
-          &nbsp;&nbsp;&nbsp;
+            on="Spasial" 
+            off="Non Spasial"/>
           <CSwitch 
             :pill="true" 
             :checked="true" 
@@ -829,7 +828,7 @@ import CSwitch from '../../components/Switch'
 export default {
   name: 'Switches',
   components: {
-    cSwitch
+    CSwitch
   },
   data: () => {
     return {

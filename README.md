@@ -5,6 +5,7 @@ Manual copy coreui theme from [https://github.com/muhibbudins/nuxt-coreui](https
 - nuxt: 2.0.0
 - fontawesome: 5.6.3
 - bootstrap: 4.1.3
+- nuxt validate : 0.1.2
 
 another feature:
 - include axios
