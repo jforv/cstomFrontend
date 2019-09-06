@@ -8,7 +8,7 @@
     </button>
     <b-link 
       class="navbar-brand" 
-      to="#" />
+      to="/" />
     <button 
       class="navbar-toggler sidebar-toggler d-md-down-none" 
       type="button" 
@@ -16,11 +16,23 @@
       <span class="navbar-toggler-icon" />
     </button>
     <b-navbar-nav class="d-md-down-none">
-      <b-nav-item class="px-3">Dashboard</b-nav-item>
-      <b-nav-item class="px-3">Users</b-nav-item>
-      <b-nav-item class="px-3">Settings</b-nav-item>
+      <!-- <b-nav-item 
+        class="px-3" 
+        to="/pages/login">Login</b-nav-item>
+      <b-nav-item 
+        class="px-3" 
+        to="/pages/register">Register</b-nav-item> -->
+      <!-- <b-nav-item 
+        class="px-3" 
+        to="/settings">Settings</b-nav-item> -->
     </b-navbar-nav>
     <b-navbar-nav class="ml-auto">
+      <b-nav-item 
+        class="px-3" 
+        to="/pages/login">My Account</b-nav-item>
+      <b-nav-item 
+        class="px-3" 
+        to="/pages/register">Logout</b-nav-item>
       <b-nav-item class="d-md-down-none">
         <i class="icon-bell"/>
         <b-badge 

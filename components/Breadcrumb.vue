@@ -9,11 +9,11 @@
         class="active" >
         {{ showName(item) }}
       </span>
-      <router-link 
+      <nuxt-link 
         v-else 
         :to="item" >
         {{ showName(item) }}
-      </router-link>
+      </nuxt-link>
     </li>
   </ol>
 </template>
@@ -36,7 +36,9 @@ export default {
         item = item.meta && item.meta.label
       }
       if (item.name) {
-        item = item.name
+        console.log(item.path)
+        console.log('from breadcrumbs ' + item)
+        item = item.path
       }
       return item
     }

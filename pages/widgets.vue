@@ -325,7 +325,8 @@
         md="3" 
         sm="6">
         <div class="social-box facebook">
-          <i class="fa fa-facebook"/>
+          <!-- <i class="fas facebook"/> -->
+          <i class="fab fa-facebook-f"/>
           <ul>
             <li>
               <strong>89k</strong>
@@ -342,7 +343,7 @@
         md="3" 
         sm="6">
         <div class="social-box twitter">
-          <i class="fa fa-twitter"/>
+          <i class="fab fa-twitter"/>
           <ul>
             <li>
               <strong>973k</strong>
@@ -359,7 +360,7 @@
         md="3" 
         sm="6">
         <div class="social-box linkedin">
-          <i class="fa fa-linkedin"/>
+          <i class="fab fa-linkedin"/>
           <ul>
             <li>
               <strong>500+</strong>
@@ -376,7 +377,7 @@
         md="3" 
         sm="6">
         <div class="social-box google-plus">
-          <i class="fa fa-google-plus"/>
+          <i class="fab fa-google-plus"/>
           <ul>
             <li>
               <strong>894</strong>

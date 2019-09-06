@@ -2,12 +2,13 @@
   <div class="app flex-row align-items-center">
     <div class="container">
       <b-row class="justify-content-center">
-        <b-col md="8">
+        <b-col md="6">
           <b-card-group>
             <b-card 
               no-body 
               class="p-4">
               <b-card-body>
+                
                 <h1>Login</h1>
                 <p class="text-muted">Sign In to your account</p>
                 <b-input-group class="mb-3">
@@ -25,22 +26,30 @@
                     placeholder="Password">
                 </b-input-group>
                 <b-row>
-                  <b-col cols="6">
+                  <b-col cols="4">
                     <b-button 
                       variant="primary" 
                       class="px-4">Login</b-button>
                   </b-col>
                   <b-col 
-                    cols="6" 
+                    cols="4" 
                     class="text-right">
                     <b-button 
                       variant="link" 
                       class="px-0">Forgot password?</b-button>
                   </b-col>
+                  <b-col 
+                    cols="4" 
+                    class="text-center">
+                    <b-button 
+                      variant="warning" 
+                      class="px-4" 
+                      to="/pages/register">Register</b-button>
+                  </b-col>
                 </b-row>
               </b-card-body>
             </b-card>
-            <b-card 
+            <!-- <b-card 
               no-body 
               class="text-white bg-primary py-5 d-md-down-none" 
               style="width:44%">
@@ -53,7 +62,7 @@
                     class="active mt-3">Register Now!</b-button>
                 </div>
               </b-card-body>
-            </b-card>
+            </b-card> -->
           </b-card-group>
         </b-col>
       </b-row>
