@@ -536,7 +536,7 @@
             <b-button 
               type="submit" 
               size="sm" 
-              variant="primary"><font-awesome-icon :icon="['far', 'dot-circle']" /> Submit</b-button>
+              variant="primary"><font-awesome-icon :icon="['', 'dot-circle']" /> Submit</b-button>
             <b-button 
               type="reset" 
               size="sm" 
@@ -568,7 +568,7 @@
             <b-button 
               type="submit" 
               size="sm" 
-              variant="primary"><font-awesome-icon :icon="['far', 'dot-circle']" /> Submit</b-button>
+              variant="primary"><font-awesome-icon :icon="['', 'dot-circle']" /> Submit</b-button>
             <b-button 
               type="reset" 
               size="sm" 
@@ -607,7 +607,7 @@
             <b-button 
               type="submit" 
               size="sm" 
-              variant="primary"><font-awesome-icon :icon="['far', 'dot-circle']" /> Submit</b-button>
+              variant="primary"><font-awesome-icon :icon="['', 'dot-circle']" /> Submit</b-button>
             <b-button 
               type="reset" 
               size="sm" 
@@ -644,7 +644,7 @@
             <b-button 
               type="submit" 
               size="sm" 
-              variant="primary"><font-awesome-icon :icon="['far', 'dot-circle']" /> Submit</b-button>
+              variant="primary"><font-awesome-icon :icon="['', 'dot-circle']" /> Submit</b-button>
             <b-button 
               type="reset" 
               size="sm" 
@@ -782,7 +782,7 @@
             <b-button 
               type="submit" 
               size="sm" 
-              variant="primary"><font-awesome-icon :icon="['far', 'dot-circle']" /> Submit</b-button>
+              variant="primary"><font-awesome-icon :icon="['', 'dot-circle']" /> Submit</b-button>
             <b-button 
               type="reset" 
               size="sm" 
@@ -912,7 +912,7 @@
             <b-button 
               type="submit" 
               size="sm" 
-              variant="success"><font-awesome-icon :icon="['far', 'dot-circle']" /> Submit</b-button>
+              variant="success"><font-awesome-icon :icon="['', 'dot-circle']" /> Submit</b-button>
             <b-button 
               type="reset" 
               size="sm" 
@@ -968,7 +968,7 @@
             <b-button 
               type="submit" 
               size="sm" 
-              variant="success"><font-awesome-icon :icon="['far', 'dot-circle']" /> Submit</b-button>
+              variant="success"><font-awesome-icon :icon="['', 'dot-circle']" /> Submit</b-button>
             <b-button 
               type="reset" 
               size="sm" 
@@ -1047,7 +1047,7 @@
             <b-button 
               type="submit" 
               size="sm" 
-              variant="success"><font-awesome-icon :icon="['far', 'dot-circle']" /> Submit</b-button>
+              variant="success"><font-awesome-icon :icon="['', 'dot-circle']" /> Submit</b-button>
             <b-button 
               type="reset" 
               size="sm" 

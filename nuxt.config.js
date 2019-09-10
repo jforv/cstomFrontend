@@ -4,17 +4,28 @@ module.exports = {
   mode: 'universal',
 
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     title: pkg.name,
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+    meta: [{
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: pkg.description
+      }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    link: [{
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      },
       {
         rel: 'stylesheet',
         href: 'https://use.fontawesome.com/releases/v5.7.2/css/all.css'
@@ -23,13 +34,15 @@ module.exports = {
   },
 
   /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#42A5CC' },
+   ** Customize the progress-bar color
+   */
+  loading: {
+    color: '#42A5CC'
+  },
 
   /*
-  ** Global CSS
-  */
+   ** Global CSS
+   */
   css: [
     /* Import Font Awesome Icons Set */
     '~/node_modules/flag-icon-css/css/flag-icon.min.css',
@@ -42,13 +55,16 @@ module.exports = {
   ],
 
   /*
-  ** Plugins to load before mounting the App
-  */
+   ** Plugins to load before mounting the App
+   */
   plugins: [],
 
   /*
-  ** Nuxt.js modules
-  */
+   ** Nuxt.js modules
+   */
+  router: {
+    middleware: ['auth']
+  },
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
@@ -58,8 +74,7 @@ module.exports = {
     [
       'nuxt-fontawesome',
       {
-        imports: [
-          {
+        imports: [{
             set: '@fortawesome/free-solid-svg-icons',
             icons: ['fas']
           },
@@ -72,8 +87,8 @@ module.exports = {
     ]
   ],
   /*
-  ** Axios module configuration
-  */
+   ** Axios module configuration
+   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
     baseURL: 'http://127.0.0.1:3333/api'
@@ -82,31 +97,51 @@ module.exports = {
     strategies: {
       local: {
         endpoints: {
-          login: { url: 'login', method: 'post', propertyName: 'data.token' },
-          user: { url: 'me', method: 'get', propertyName: 'data' },
+          login: {
+            url: 'login',
+            method: 'post',
+            propertyName: 'data.token'
+          },
+          user: {
+            url: 'me',
+            method: 'get',
+            propertyName: 'data'
+          },
           logout: false
         }
       }
     }
+    // strategies: {
+    //   local: {
+    //     endpoints: {
+    //       login: {
+    //         url: '/api/auth/login',
+    //         method: 'post'
+    //       },
+    //     },
+    //     tokenRequired: false,
+    //     tokenType: false
+    //   }
+    // }
   },
 
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
+     ** You can extend webpack config here
+     */
+    // extend(config, ctx) {
+    //   // Run ESLint on save
+    //   if (ctx.isDev && ctx.isClient) {
+    //     config.module.rules.push({
+    //       enforce: 'pre',
+    //       test: /\.(js|vue)$/,
+    //       loader: 'eslint-loader',
+    //       exclude: /(node_modules)/
+    //     })
+    //   }
+    // }
   }
 }
