@@ -4,7 +4,7 @@
       id="new47" 
       no-body>
       <div slot="header">
-        <i class="fa fa-font-awesome"/> Flags
+        <i class="fas fa-font-awesome"/> Flags
       </div>
       <b-card-body>
         <b-row class="text-center">

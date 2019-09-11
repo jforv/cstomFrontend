@@ -7,11 +7,11 @@
       <strong>Account</strong>
     </b-dropdown-header>
     <b-dropdown-item>
-      <font-awesome-icon :icon="['', 'bell']" />Updates
+      <font-awesome-icon :icon="['fas', 'bell']" />Updates
       <b-badge variant="info">{{ itemsCount }}</b-badge>
     </b-dropdown-item>
     <b-dropdown-item>
-      <font-awesome-icon :icon="['', 'envelope']" />Messages
+      <font-awesome-icon :icon="['fas', 'envelope']" />Messages
       <b-badge variant="success">{{ itemsCount }}</b-badge>
     </b-dropdown-item>
     <b-dropdown-item>
@@ -19,14 +19,14 @@
       <b-badge variant="danger">{{ itemsCount }}</b-badge>
     </b-dropdown-item>
     <b-dropdown-item>
-      <font-awesome-icon :icon="['', 'comments']" />Comments
+      <font-awesome-icon :icon="['fas', 'comments']" />Comments
       <b-badge variant="warning">{{ itemsCount }}</b-badge>
     </b-dropdown-item>
     <b-dropdown-header tag="div" class="text-center">
       <strong>Settings</strong>
     </b-dropdown-header>
     <b-dropdown-item>
-      <font-awesome-icon :icon="['', 'user']" />Profile
+      <font-awesome-icon :icon="['fas', 'user']" />Profile
     </b-dropdown-item>
     <b-dropdown-item>
       <font-awesome-icon :icon="['fas', 'wrench']" />Settings
@@ -36,7 +36,7 @@
       <b-badge variant="secondary">{{ itemsCount }}</b-badge>
     </b-dropdown-item>
     <b-dropdown-item>
-      <font-awesome-icon :icon="['', 'file']" />Projects
+      <font-awesome-icon :icon="['fas', 'file']" />Projects
       <b-badge variant="primary">{{ itemsCount }}</b-badge>
     </b-dropdown-item>
     <b-dropdown-divider />

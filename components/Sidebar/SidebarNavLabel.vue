@@ -29,7 +29,7 @@ export default {
     },
     icon: {
       type: String,
-      default: 'fa fa-circle'
+      default: 'fas fa-circle'
     },
     classes: {
       type: String,
@@ -47,7 +47,7 @@ export default {
         navItem: ['hidden-cn', ...this.getClasses(this.classes)].join(' '),
         navLink: 'nav-label',
         icon: [
-          this.icon ? this.icon : 'fa fa-circle',
+          this.icon ? this.icon : 'fas fa-circle',
           this.label.variant ? `text-${this.label.variant}` : '',
           this.label.class ? this.label.class : ''
         ].join(' ')

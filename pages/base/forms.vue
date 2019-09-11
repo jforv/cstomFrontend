@@ -733,7 +733,7 @@
             <b-button 
               type="submit" 
               size="sm" 
-              variant="primary"><i class="fa fa-user"/> Login</b-button>
+              variant="primary"><i class="fas fa-user"/> Login</b-button>
             <b-button 
               type="reset" 
               size="sm" 
@@ -882,7 +882,7 @@
           <b-form-group>
             <b-input-group>
               <b-input-group-prepend>
-                <b-input-group-text><i class="fa fa-user"/></b-input-group-text>
+                <b-input-group-text><i class="fas fa-user"/></b-input-group-text>
               </b-input-group-prepend>
               <b-form-input 
                 type="text" 
@@ -894,13 +894,13 @@
               <b-form-input 
                 type="email" 
                 placeholder="Email"/>
-              <b-input-group-append><b-input-group-text><i class="fa fa-envelope-o"/></b-input-group-text></b-input-group-append>
+              <b-input-group-append><b-input-group-text><i class="fas fa-envelope-o"/></b-input-group-text></b-input-group-append>
             </b-input-group>
           </b-form-group>
           <b-form-group>
             <b-input-group>
               <b-input-group-prepend>
-                <b-input-group-text><i class="fa fa-euro"/></b-input-group-text>
+                <b-input-group-text><i class="fas fa-euro"/></b-input-group-text>
               </b-input-group-prepend>
               <b-form-input 
                 type="text" 
@@ -930,7 +930,7 @@
               <!-- Attach Left button -->
               <b-input-group-prepend>
                 <b-button variant="primary">
-                  <i class="fa fa-search"/> Search
+                  <i class="fas fa-search"/> Search
                 </b-button>
               </b-input-group-prepend>
               <b-form-input 
@@ -953,14 +953,14 @@
             <b-input-group>
               <!-- Attach Left button -->
               <b-input-group-prepend>
-                <b-button variant="primary"><i class="fa fa-facebook"/></b-button>
+                <b-button variant="primary"><i class="fas fa-facebook"/></b-button>
               </b-input-group-prepend>
               <b-form-input 
                 type="email" 
                 placeholder="Email"/>
               <!-- Attach Left button -->
               <b-input-group-append>
-                <b-button variant="primary"><i class="fa fa-twitter"/></b-button>
+                <b-button variant="primary"><i class="fas fa-twitter"/></b-button>
               </b-input-group-append>
             </b-input-group>
           </b-form-group>
@@ -1242,21 +1242,21 @@
             <b-input-group>
               <b-input-group-prepend><b-input-group-text>Username</b-input-group-text></b-input-group-prepend>
               <b-form-input type="text"/>
-              <b-input-group-append><b-input-group-text><i class="fa fa-user"/></b-input-group-text></b-input-group-append>
+              <b-input-group-append><b-input-group-text><i class="fas fa-user"/></b-input-group-text></b-input-group-append>
             </b-input-group>
           </b-form-group>
           <b-form-group>
             <b-input-group>
               <b-input-group-prepend><b-input-group-text>Email</b-input-group-text></b-input-group-prepend>
               <b-form-input type="email"/>
-              <b-input-group-append><b-input-group-text><i class="fa fa-envelope"/></b-input-group-text></b-input-group-append>
+              <b-input-group-append><b-input-group-text><i class="fas fa-envelope"/></b-input-group-text></b-input-group-append>
             </b-input-group>
           </b-form-group>
           <b-form-group>
             <b-input-group>
               <b-input-group-prepend><b-input-group-text>Password</b-input-group-text></b-input-group-prepend>
               <b-form-input type="password"/>
-              <b-input-group-append><b-input-group-text><i class="fa fa-asterisk"/></b-input-group-text></b-input-group-append>
+              <b-input-group-append><b-input-group-text><i class="fas fa-asterisk"/></b-input-group-text></b-input-group-append>
             </b-input-group>
           </b-form-group>
           <div class="form-group form-actions">
@@ -1277,7 +1277,7 @@
               <b-form-input 
                 type="text" 
                 placeholder="Username"/>
-              <b-input-group-append><b-input-group-text><i class="fa fa-user"/></b-input-group-text></b-input-group-append>
+              <b-input-group-append><b-input-group-text><i class="fas fa-user"/></b-input-group-text></b-input-group-append>
             </b-input-group>
           </b-form-group>
           <b-form-group>
@@ -1285,7 +1285,7 @@
               <b-form-input 
                 type="email" 
                 placeholder="Email"/>
-              <b-input-group-append><b-input-group-text><i class="fa fa-envelope"/></b-input-group-text></b-input-group-append>
+              <b-input-group-append><b-input-group-text><i class="fas fa-envelope"/></b-input-group-text></b-input-group-append>
             </b-input-group>
           </b-form-group>
           <b-form-group>
@@ -1293,7 +1293,7 @@
               <b-form-input 
                 type="password" 
                 placeholder="Password"/>
-              <b-input-group-append><b-input-group-text><i class="fa fa-asterisk"/></b-input-group-text></b-input-group-append>
+              <b-input-group-append><b-input-group-text><i class="fas fa-asterisk"/></b-input-group-text></b-input-group-append>
             </b-input-group>
           </b-form-group>
           <div class="form-group form-actions">
@@ -1311,7 +1311,7 @@
           <b-form-group>
             <b-input-group>
               <b-input-group-prepend>
-                <b-input-group-text><i class="fa fa-user"/></b-input-group-text>
+                <b-input-group-text><i class="fas fa-user"/></b-input-group-text>
               </b-input-group-prepend>
               <b-form-input 
                 type="text" 
@@ -1321,7 +1321,7 @@
           <b-form-group>
             <b-input-group>
               <b-input-group-prepend>
-                <b-input-group-text><i class="fa fa-envelope"/></b-input-group-text>
+                <b-input-group-text><i class="fas fa-envelope"/></b-input-group-text>
               </b-input-group-prepend>
               <b-form-input 
                 type="email" 
@@ -1331,7 +1331,7 @@
           <b-form-group>
             <b-input-group>
               <b-input-group-prepend>
-                <b-input-group-text><i class="fa fa-asterisk"/></b-input-group-text>
+                <b-input-group-text><i class="fas fa-asterisk"/></b-input-group-text>
               </b-input-group-prepend>
               <b-form-input 
                 type="password" 
@@ -1351,7 +1351,7 @@
       <b-col lg="12">
         <b-card no-body>
           <div slot="header">
-            <i class="fa fa-edit"/> Form Elements
+            <i class="fas fa-edit"/> Form Elements
             <div class="card-actions">
               <a 
                 href="#" 

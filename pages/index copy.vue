@@ -846,7 +846,7 @@ export default {
           },
           country: { name: 'USA', flag: 'us' },
           usage: { value: 50, period: 'Jun 11, 2015 - Jul 10, 2015' },
-          payment: { name: 'Mastercard', icon: 'fa fa-cc-mastercard' },
+          payment: { name: 'Mastercard', icon: 'fas fa-cc-mastercard' },
           activity: '10 sec ago'
         },
         {
@@ -858,7 +858,7 @@ export default {
           },
           country: { name: 'Brazil', flag: 'br' },
           usage: { value: 22, period: 'Jun 11, 2015 - Jul 10, 2015' },
-          payment: { name: 'Visa', icon: 'fa fa-cc-visa' },
+          payment: { name: 'Visa', icon: 'fas fa-cc-visa' },
           activity: '5 minutes ago'
         },
         {
@@ -866,7 +866,7 @@ export default {
           user: { name: 'Quintin Ed', new: true, registered: 'Jan 1, 2015' },
           country: { name: 'India', flag: 'in' },
           usage: { value: 74, period: 'Jun 11, 2015 - Jul 10, 2015' },
-          payment: { name: 'Stripe', icon: 'fa fa-cc-stripe' },
+          payment: { name: 'Stripe', icon: 'fas fa-cc-stripe' },
           activity: '1 hour ago'
         },
         {
@@ -874,7 +874,7 @@ export default {
           user: { name: 'Enéas Kwadwo', new: true, registered: 'Jan 1, 2015' },
           country: { name: 'France', flag: 'fr' },
           usage: { value: 98, period: 'Jun 11, 2015 - Jul 10, 2015' },
-          payment: { name: 'PayPal', icon: 'fa fa-paypal' },
+          payment: { name: 'PayPal', icon: 'fas fa-paypal' },
           activity: 'Last month'
         },
         {
@@ -886,7 +886,7 @@ export default {
           },
           country: { name: 'Spain', flag: 'es' },
           usage: { value: 22, period: 'Jun 11, 2015 - Jul 10, 2015' },
-          payment: { name: 'Google Wallet', icon: 'fa fa-google-wallet' },
+          payment: { name: 'Google Wallet', icon: 'fas fa-google-wallet' },
           activity: 'Last week'
         },
         {
@@ -898,7 +898,7 @@ export default {
           },
           country: { name: 'Poland', flag: 'pl' },
           usage: { value: 43, period: 'Jun 11, 2015 - Jul 10, 2015' },
-          payment: { name: 'Amex', icon: 'fa fa-cc-amex' },
+          payment: { name: 'Amex', icon: 'fas fa-cc-amex' },
           activity: 'Last week'
         }
       ],

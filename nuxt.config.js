@@ -63,7 +63,7 @@ module.exports = {
    ** Nuxt.js modules
    */
   router: {
-    middleware: ['auth']
+    middleware: ['auth', 'isLoggedIn']
   },
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage

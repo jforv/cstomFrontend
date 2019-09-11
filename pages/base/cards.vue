@@ -19,7 +19,7 @@
       <b-col 
         sm="6" 
         md="4">
-        <b-card header="<i class='fa fa-check'></i> Card with icon">
+        <b-card header="<i class='fas fa-check'></i> Card with icon">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </b-card>
       </b-col>

@@ -23,12 +23,12 @@
           <div slot="header">
             <strong>With Icons</strong>
           </div>
-          <b-button variant="primary"><i class="fa fa-star"/>&nbsp; Primary</b-button>
-          <b-button variant="secondary"><i class="fa fa-lightbulb-o"/>&nbsp; Secondary</b-button>
-          <b-button variant="success"><i class="fa fa-magic"/>&nbsp; Success</b-button>
-          <b-button variant="warning"><i class="fa fa-map-marker"/>&nbsp; Warning</b-button>
-          <b-button variant="danger"><i class="fa fa-rss"/>&nbsp; Danger</b-button>
-          <b-button variant="link"><i class="fa fa-link"/>&nbsp; Link</b-button>
+          <b-button variant="primary"><i class="fas fa-star"/>&nbsp; Primary</b-button>
+          <b-button variant="secondary"><i class="fas fa-lightbulb-o"/>&nbsp; Secondary</b-button>
+          <b-button variant="success"><i class="fas fa-magic"/>&nbsp; Success</b-button>
+          <b-button variant="warning"><i class="fas fa-map-marker"/>&nbsp; Warning</b-button>
+          <b-button variant="danger"><i class="fas fa-rss"/>&nbsp; Danger</b-button>
+          <b-button variant="link"><i class="fas fa-link"/>&nbsp; Link</b-button>
         </b-card>
         <b-card>
           <div slot="header">
@@ -245,11 +245,11 @@
           <div slot="header">
             <strong>With Icons</strong>
           </div>
-          <b-button variant="outline-primary"><i class="fa fa-star"/>&nbsp; Primary</b-button>
-          <b-button variant="outline-secondary"><i class="fa fa-lightbulb-o"/>&nbsp; Secondary</b-button>
-          <b-button variant="outline-success"><i class="fa fa-magic"/>&nbsp; Success</b-button>
-          <b-button variant="outline-warning"><i class="fa fa-map-marker"/>&nbsp; Warning</b-button>
-          <b-button variant="outline-danger"><i class="fa fa-rss"/>&nbsp; Danger</b-button>
+          <b-button variant="outline-primary"><i class="fas fa-star"/>&nbsp; Primary</b-button>
+          <b-button variant="outline-secondary"><i class="fas fa-lightbulb-o"/>&nbsp; Secondary</b-button>
+          <b-button variant="outline-success"><i class="fas fa-magic"/>&nbsp; Success</b-button>
+          <b-button variant="outline-warning"><i class="fas fa-map-marker"/>&nbsp; Warning</b-button>
+          <b-button variant="outline-danger"><i class="fas fa-rss"/>&nbsp; Danger</b-button>
         </b-card>
         <b-card>
           <div slot="header">

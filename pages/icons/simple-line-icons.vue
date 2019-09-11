@@ -4,7 +4,7 @@
       no-body 
       class="card-default">
       <div slot="header">
-        <i class="fa fa-picture-o"/> Simple Line Icons
+        <i class="fas fa-picture-o"/> Simple Line Icons
       </div>
       <b-card-body>
         <b-row class="text-center">
