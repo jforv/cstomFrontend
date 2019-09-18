@@ -2,6 +2,10 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
+  server: {
+    port: 8000, // default: 3000
+    host: '0.0.0.0', // default: localhost
+  },
 
   /*
    ** Headers of the page
@@ -91,38 +95,45 @@ module.exports = {
    */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    baseURL: 'http://127.0.0.1:3333/api'
+    baseURL: 'http://ec2-18-188-44-149.us-east-2.compute.amazonaws.com/'
+    //1d159d7984a399c
   },
   auth: {
-    strategies: {
-      local: {
-        endpoints: {
-          login: {
-            url: 'login',
-            method: 'post',
-            propertyName: 'data.token'
-          },
-          user: {
-            url: 'me',
-            method: 'get',
-            propertyName: 'data'
-          },
-          logout: false
-        }
-      }
-    }
     // strategies: {
     //   local: {
     //     endpoints: {
     //       login: {
-    //         url: '/api/auth/login',
-    //         method: 'post'
+    //         url: 'login',
+    //         method: 'post',
+    //         propertyName: 'data.token'
     //       },
-    //     },
-    //     tokenRequired: false,
-    //     tokenType: false
+    //       user: {
+    //         url: 'me',
+    //         method: 'get',
+    //         propertyName: 'data'
+    //       },
+    //       logout: false
+    //     }
     //   }
     // }
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: '/method/login',
+            method: 'post',
+            propertyName: false
+          },
+        },
+        user: {
+          url: 'method/frappe.auth.get_logged_user',
+          method: 'get',
+          propertyName: 'data'
+        },
+        tokenRequired: false,
+        tokenType: false
+      }
+    }
   },
 
   /*
