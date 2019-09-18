@@ -3,7 +3,7 @@ export default function ({
   redirect
 }) {
   if (store.state.auth.loggedIn) {
-    return redirect('/pages/login')
+    return redirect('/login')
   } else {
     return redirect('/users/profile')
   }

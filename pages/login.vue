@@ -70,16 +70,16 @@
 <script>
 import Notification from '@/components/AppNotifications'
 export default {
-  name: 'Login',
-  layout: 'clean',
-  auth: 'guest',
   components: {
     Notification
   },
+  name: 'Login',
+  layout: 'clean',
+  auth: 'guest',
   data: () => ({
     form: {
-      email: 'xb@gmail.com',
-      password: '1234',
+      email: 'Administrator',
+      password: 'noyose',
       error: null
     },
     show: true
@@ -89,8 +89,8 @@ export default {
       try {
         await this.$auth.loginWith('local', {
           data: {
-            email: this.form.email,
-            password: this.form.password
+            usr: this.form.email,
+            pwd: this.form.password
           }
         })
 
