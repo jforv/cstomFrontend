@@ -1,15 +1,15 @@
 export default {
   items: [
-    {
-      name: 'Login',
-      url: '/pages/login',
-      icon: 'icon-star'
-    },
-    {
-      name: 'Register',
-      url: '/pages/register',
-      icon: 'icon-lock'
-    }
+    // {
+    //   name: 'Login',
+    //   url: '/users/login',
+    //   icon: 'icon-star'
+    // },
+    // {
+    //   name: 'Register',
+    //   url: '/pages/register',
+    //   icon: 'icon-lock'
+    // }
   ]
   // items: [
   //   {
@@ -233,7 +233,7 @@ export default {
   //     children: [
   //       {
   //         name: 'Login',
-  //         url: '/pages/login',
+  //         url: '/users/login',
   //         icon: 'icon-star'
   //       },
   //       {

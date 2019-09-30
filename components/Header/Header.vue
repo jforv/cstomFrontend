@@ -18,7 +18,7 @@
     <b-navbar-nav class="d-md-down-none">
       <!-- <b-nav-item 
         class="px-3" 
-        to="/pages/login">Login</b-nav-item>
+        to="/users/login">Login</b-nav-item>
       <b-nav-item 
         class="px-3" 
       to="/pages/register">Register</b-nav-item>-->
@@ -42,7 +42,7 @@
         </b-dropdown-item>
         <b-nav-item class="px-3" @click="logout">Logout</b-nav-item>
       </b-dropdown>-->
-      <b-nav-item v-else to="/pages/login">Login</b-nav-item>
+      <b-nav-item v-else to="/users/login">Login</b-nav-item>
       <b-nav-item class="d-md-down-none">
         <i class="icon-bell" />
         <b-badge pill variant="danger">5</b-badge>
@@ -85,6 +85,7 @@ export default {
   },
   mounted: function() {
     this.isFixed(this.fixed)
+    // console.log(mapGetters(['isAuthenticated','loggedInUser']))
   },
   methods: {
     isFixed(fixed) {
@@ -109,7 +110,8 @@ export default {
       document.body.classList.toggle('sidebar-mobile-show')
     },
     asideToggle(e) {
-      e.preventDefault()
+      // e.preventDefault()
+      console.log(e)
       document.body.classList.toggle('aside-menu-hidden')
     }
   }

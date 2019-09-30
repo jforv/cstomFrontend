@@ -59,7 +59,7 @@ export default {
     async logout() {
       try {
         this.$store.dispatch('logout').then(() => {
-          this.$router.push('/pages/login')
+          this.$router.push('/users/login')
         })
       } catch (e) {
         this.formError = e.message
