@@ -67,14 +67,15 @@ module.exports = {
    ** Nuxt.js modules
    */
   router: {
-    middleware: ['auth', 'isLoggedIn']
+    // middleware: ['isLoggedIn']
+    // middleware: ['auth', 'isLoggedIn']
   },
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
-    '@nuxtjs/auth',
+    // '@nuxtjs/auth',
     [
       'nuxt-fontawesome',
       {
@@ -95,48 +96,56 @@ module.exports = {
    */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    baseURL: 'http://ec2-18-188-44-149.us-east-2.compute.amazonaws.com/'
+    baseURL: 'http://18.188.44.149/api'
     //1d159d7984a399c
   },
-  auth: {
-    // strategies: {
-    //   local: {
-    //     endpoints: {
-    //       login: {
-    //         url: 'login',
-    //         method: 'post',
-    //         propertyName: 'data.token'
-    //       },
-    //       user: {
-    //         url: 'me',
-    //         method: 'get',
-    //         propertyName: 'data'
-    //       },
-    //       logout: false
-    //     }
-    //   }
-    // }
-    strategies: {
-      local: {
-        endpoints: {
-          login: {
-            url: '/method/login',
-            method: 'post',
-            propertyName: false
-          },
-        },
-        user: {
-          url: 'method/frappe.auth.get_logged_user',
-          method: 'get',
-          propertyName: 'data'
-        },
-        tokenRequired: false,
-        tokenType: false
-      }
-    }
-  },
-
-  /*
+  // auth: {
+  //   strategies: {
+  //     local: {
+  //       endpoints: {
+  //         'login': {
+  //           url: '/method/users/login',
+  //           method: 'post',
+  //           propertyName: 'data.token'
+  //         },
+  //         user: {
+  //           url: '/method/frappe.auth.get_logged_user',
+  //           method: 'get',
+  //           propertyName: 'data'
+  //         },
+  //         logout: false
+  //       }
+  //     }
+  //   }
+    //   strategies: {
+  //     local: {
+    //       endpoints: {
+      //         login: {
+        //           url: '/method/login',
+        //           method: 'post',
+        //           propertyName: false
+        //         },
+        //       },
+        //       user: {
+          //         url: '/method/frappe.auth.get_logged_user',
+          //         method: 'get',
+          //         propertyName: 'data'
+          //       },
+          //       tokenRequired: false,
+          //       tokenType: false
+          //     }
+          //   }
+        // },
+        
+        // proxy: {
+        //   'api/auth/user': {
+        //     target: 'http://localhost:8000',
+        //     pathRewrite: {
+        //       '^api/auth/user' : '/api/method/login'
+        //       }
+        //     }
+        // },
+        /*
    ** Build configuration
    */
   build: {

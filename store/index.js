@@ -1,9 +1,9 @@
 export const getters = {
   isAuthenticated(state) {
-    return state.auth.loggedIn
+    return state.users.auth.loggedIn
   },
 
   loggedInUser(state) {
-    return state.auth.user
+    return state.auth.users.getUser
   }
 }
