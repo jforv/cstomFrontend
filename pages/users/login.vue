@@ -69,6 +69,7 @@
 
 <script>
 import Notification from '@/components/AppNotifications'
+import {mapActions} from vuex
 export default {
   components: {
     Notification
