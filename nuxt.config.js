@@ -76,6 +76,8 @@ module.exports = {
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
     // '@nuxtjs/auth',
+    '@nuxtjs/dotenv',
+
     [
       'nuxt-fontawesome',
       {
