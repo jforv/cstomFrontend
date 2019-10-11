@@ -1,8 +1,9 @@
 import { tokenExpiry } from '~/.env'
-import { firebase, googleAuthProvider } from "~/plugins/firebase";
+// import { firebase, googleAuthProvider } from "~/plugins/firebase";
 
 export const state = () => ({
     user: null,
+    isloggedIn: ''
 })
 
 // // mutations
@@ -10,15 +11,21 @@ export const mutations = {
     setUser(state, data) {
         state.user = data;
     },
+    
 //     clearUser(state) {
 //         console.log('Logout Successful');
 //         state.user = null
 //     }
 }
 
-// export const getters = {
-    
-// }
+export const getters = {
+        authUser (state, getters, rootState) {
+          return state.authId ? rootState.users.items[state.authId] : null
+        },
+        activeUser: (state, getters) => {
+            return state.user
+          }
+      }
 export const actions = {
     async fetch({ commit }) {
         try {
@@ -31,6 +38,14 @@ export const actions = {
             commit('setErr', err, { root: true })
         }
     },
+    async autoSignIn ({commit}, payload) {
+        commit('setUser', payload)
+      },
+      signOut ({commit}) {
+        auth.signOut().then(() => {
+          commit('setUser', null)
+        }).catch(err => console.log(error))
+      },
     async registerUserWithEmailAndPassword ({dispatch}, {email, name, username, password, avatar = null}) {
         return firebase.auth().createUserWithEmailAndPassword(email, password)
           .then(user => {

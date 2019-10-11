@@ -1,15 +1,17 @@
 const pkg = require('./package')
 const config = require('./firebase')
-
+require('dotenv').config()
 module.exports = {
-  apiKey: "AIzaSyApn1yDyoWp9MG_eWtybja4SB5PR-Z-gzw",
-  authDomain: "graceclinic-97af9.firebaseapp.com",
-  databaseURL: "https://graceclinic-97af9.firebaseio.com",
-  projectId: "graceclinic-97af9",
-  storageBucket: "graceclinic-97af9.appspot.com",
-  messagingSenderId: "554552617490",
-  appId: "1:554552617490:web:147a4b4a027315ab6b46cb",
-  ANALYTICS_TRACKING_ID: config.ANALYTICS_TRACKING_ID,
+  env:{
+  apiKey: process.env.apiKey,
+  authDomain: process.env.authDomain,
+  databaseURL: process.env.databaseURL,
+  projectId: process.env.projectId,
+  storageBucket: process.env.storageBucket,
+  messagingSenderId: process.env.messagingSenderId,
+  appId: process.env.appId,
+  ANALYTICS_TRACKING_ID: process.env.ANALYTICS_TRACKING_ID,
+  },
   clearCart: true, // Whether to clear the cart after order is placed. Useful while testing
   currency: { symbol: '$', code: 'DO' },
   manifest: {

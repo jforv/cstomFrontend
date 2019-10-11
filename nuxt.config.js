@@ -67,7 +67,7 @@ module.exports = {
    ** Nuxt.js modules
    */
   router: {
-    // middleware: ['isLoggedIn']
+    middleware: ['guest']
     // middleware: ['auth', 'isLoggedIn']
   },
   modules: [
