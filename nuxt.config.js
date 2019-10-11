@@ -67,7 +67,7 @@ module.exports = {
    ** Nuxt.js modules
    */
   router: {
-    // middleware: ['isLoggedIn']
+    middleware: ['guest']
     // middleware: ['auth', 'isLoggedIn']
   },
   modules: [
@@ -76,6 +76,8 @@ module.exports = {
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
     // '@nuxtjs/auth',
+    '@nuxtjs/dotenv',
+
     [
       'nuxt-fontawesome',
       {

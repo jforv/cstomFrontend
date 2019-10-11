@@ -9,7 +9,7 @@
                 <h1>Login</h1>
                 <Notification :message="account.error" v-if="account.error" />
                 <p class="text-muted">Sign In to your account</p>
-                <b-form method="post" @submit.prevent="login" show="show">
+                <b-form method="post" @submit.prevent="emailLogin" show="show">
                   <div>
                     <b-form-group id="input-group-0" label="Enter Email:" label-for="input-0">
                       <b-form-input
@@ -69,6 +69,7 @@
 
 <script>
 import Notification from '@/components/AppNotifications'
+// import {mapActions} from vuex
 export default {
   components: {
     Notification
@@ -85,14 +86,27 @@ export default {
     show: true
   }),
   methods: {
-    async login() {
-     this.$store.dispatch('users/auth/signInWithEmailAndPassword', {
-       email: this.account.email,
-       password: this.account.password
-     })
-      .then(() => this.successRedirect())
-              .catch(error => alert('🤷‍️' + error.message))
-          }
+    emailLogin () {
+      this.$store.dispatch('userLogin', {
+        email: this.account.email,
+        password: this.account.password
+      }).then(() => {
+        this.account.email = ''
+        this.account.password = ''
+        this.$router.push('/')
+      }).catch((e) => {
+        console.log(e.message);
+        this.account.error = e.message;
+      })
+    },
+    // async login() {
+    //  this.$store.dispatch('users/auth/signInWithEmailAndPassword', {
+    //    email: this.account.email,
+    //    password: this.account.password
+    //  })
+    //   .then(() => this.successRedirect())
+    //           .catch(error => alert('🤷‍️' + error.message))
+    //       }
   }
 }
 </script>
