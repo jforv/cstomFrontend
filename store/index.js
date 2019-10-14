@@ -1,6 +1,6 @@
 import Vuex from 'vuex'
 import firebase from 'firebase'
-import { firebaseMutations, firebaseAction } from 'vuexfire'
+import { vuexfireMutations, firebaseAction } from 'vuexfire'
 
 function createNewAccount (user) {
   return firebase.database().ref(`accounts/${user.uid}`).set({
@@ -98,7 +98,7 @@ const createStore = () => {
       }
     },
     mutations: {
-      ...firebaseMutations,
+      ...vuexfireMutations,
       setUser (state, user) {
         state.user = user
         return this.dispatch('setAccountRef', `accounts/${state.user.uid}`)

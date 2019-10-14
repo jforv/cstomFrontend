@@ -149,5 +149,6 @@ export default {
 <style lang="css">
   .nav-link {
     cursor:pointer;
+    /* color: #42A5CC; */
   }
 </style>

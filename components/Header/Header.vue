@@ -15,17 +15,11 @@
     >
       <span class="navbar-toggler-icon" />
     </button>
-    <b-navbar-nav class="d-md-down-none">
-      <!-- <b-nav-item 
-        class="px-3" 
-        to="/users/login">Login</b-nav-item>
-      <b-nav-item 
-        class="px-3" 
-      to="/pages/register">Register</b-nav-item>-->
-      <!-- <b-nav-item 
-        class="px-3" 
-      to="/settings">Settings</b-nav-item>-->
-    </b-navbar-nav>
+    <!-- <b-navbar-nav class="d-md-down-none">
+      <b-nav-item class="px-3" to="/users/login">Login</b-nav-item>
+      <b-nav-item class="px-3" to="/users/register">Register</b-nav-item>
+      <b-nav-item class="px-3" to="/settings">Settings</b-nav-item>
+    </b-navbar-nav>-->
     <b-navbar-nav class="ml-auto">
       <b-nav-item-dropdown right v-if="isAuthenticated">
         <!-- Using button-content slot -->

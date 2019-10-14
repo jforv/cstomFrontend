@@ -1,19 +1,8 @@
 <template>
   <ol class="breadcrumb">
-    <li  
-      v-for="(item, index) in list" 
-      :key="index"
-      class="breadcrumb-item" >
-      <span 
-        v-if="isLast(index)"
-        class="active" >
-        {{ showName(item) }}
-      </span>
-      <nuxt-link 
-        v-else 
-        :to="item" >
-        {{ showName(item) }}
-      </nuxt-link>
+    <li v-for="(item, index) in list" :key="index" class="breadcrumb-item">
+      <span v-if="isLast(index)" class="active">{{ showName(item) }}</span>
+      <nuxt-link v-else :to="item">{{ showName(item) }}</nuxt-link>
     </li>
   </ol>
 </template>
@@ -36,8 +25,8 @@ export default {
         item = item.meta && item.meta.label
       }
       if (item.name) {
-        console.log(item.path)
-        console.log('from breadcrumbs ' + item)
+        // console.log(item.path)
+        // console.log('from breadcrumbs ' + item)
         item = item.path
       }
       return item
