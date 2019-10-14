@@ -8,11 +8,11 @@ export default {
   data: () => ({
     route: ''
   }),
-  mounted: {
-    getRoute({ params }) {
-      // console.log(this.$route + 'la ruta')
-      // this.route = params.route
-    }
+  created() {
+    // getRoute({ params }) {
+    console.log(this.$route)
+    // this.route = params.route
+    // }
   }
 }
 </script>
