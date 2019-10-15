@@ -11,7 +11,8 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
+    // title: pkg.name,
+    titleTemplate: '%s - Grace Clinic',
     meta: [
       {
         charset: 'utf-8'
@@ -169,4 +170,8 @@ module.exports = {
     //   }
     // }
   }
+  // transition: {
+  //   name: 'page',
+  //   mode: 'out-in'
+  // }
 }
