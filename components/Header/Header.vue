@@ -42,7 +42,7 @@
         </b-dropdown-item>
         <b-nav-item class="px-3" @click="logout">Logout</b-nav-item>
       </b-dropdown>-->
-      <b-nav-item v-else to="/users/login">Login</b-nav-item>
+      <b-nav-item v-else to="/users/login">{{isAuthenticated}} Login</b-nav-item>
       <b-nav-item class="d-md-down-none">
         <i class="icon-bell" />
         <b-badge pill variant="danger">5</b-badge>
@@ -58,6 +58,7 @@
     <button
       class="navbar-toggler aside-menu-toggler d-md-down-none"
       type="button"
+      :class="isfixed"
       @click="asideToggle"
     >
       <span class="navbar-toggler-icon" />
@@ -81,10 +82,13 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['isAuthenticated', 'loggedInUser'])
+    ...mapGetters(['authentication/isAuthenticated', 'loggedInUser']),
+    // isAuthenticated(){
+    //   return false
+    // }
   },
   mounted: function() {
-    this.isFixed(this.fixed)
+    // this.isFixed(this.fixed)
     // console.log(mapGetters(['isAuthenticated','loggedInUser']))
   },
   methods: {

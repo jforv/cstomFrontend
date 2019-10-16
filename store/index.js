@@ -1,110 +1,109 @@
-import Vuex from 'vuex'
-import firebase from 'firebase'
-import { firebaseMutations, firebaseAction } from 'vuexfire'
+import { config } from '~/.env'
+// import { firebase, googleAuthProvider, authentication } from "~/plugins/firebase";
+import { firestore } from 'firebase';
+import firebase from 'firebase/app'
 
-function createNewAccount (user) {
-  return firebase.database().ref(`accounts/${user.uid}`).set({
-    displayName: user.displayName || user.email.split('@')[0], // use part of the email as a username
-    email: user.email,
-    image: user.newImage || '/images/default-profile.png' // supply a default profile image for all users
-  })
-}
+export const state = () => ({
+    user: null,
+})
 
-const createStore = () => {
-  return new Vuex.Store({
-    state: {
-      user: null,
-      account: null
+// mutations
+export const mutations = {
+    setUser(state, data) {
+        state.user = data
+        state.username = data.displayName
     },
-    getters: {
-      isAuthenticated (state) {
-        return !!state.user
-      }
-    },
-    actions: {
-      setAccountRef: firebaseAction(({ bindFirebaseRef }, path) => {
-        return bindFirebaseRef('account', firebase.database().ref(path))
-      }),
-      resetUser ({
-        state
-      }) {
+    clearUser(state) {
+        console.log('Logout Successful');
         state.user = null
-      },
-      userCreate ({ state }, account) {
-        return firebase.auth()
-          .createUserWithEmailAndPassword(account.email, account.password)
-          .then(({ user }) => {
-            return createNewAccount(user)
-          })
-      },
-      userGoogleLogin ({ commit }) {
-        firebase.auth().useDeviceLanguage()
-        const provider = new firebase.auth.GoogleAuthProvider()
-        provider.addScope('https://www.googleapis.com/auth/plus.login')
-        provider.setCustomParameters({
-          'login_hint': 'user@example.com'
-        })
-        return firebase.auth()
-          .signInWithPopup(provider)
-          .then((result) => {
-            createNewAccount({
-              newImage: result.additionalUserInfo.profile.picture, // just use their existing user image to start
-              ...result.user
-            })
-            return commit('setUser', result.user)
-          }).catch((error) => {
-            console.log(error)
-          })
-      },
-      userGithubLogin ({ commit }) {
-        firebase.auth().useDeviceLanguage()
-        const provider = new firebase.auth.GithubAuthProvider()
-        provider.addScope('user:email')
-        return firebase.auth()
-          .signInWithPopup(provider)
-          .then((result) => {
-            createNewAccount({
-              newImage: result.additionalUserInfo.profile.avatar_url, // just use their existing user image to start
-              ...result.user
-            })
-            return commit('setUser', result.user)
-          }).catch((error) => {
-            console.log(error)
-          })
-      },
-      userLogin ({ state }, account) {
-        return firebase.auth()
-          .signInWithEmailAndPassword(account.email, account.password)
-          .then((user) => {
-            return this.dispatch('setUser', user)
-          })
-      },
-      userLogout ({ state }) {
-        return firebase.auth()
-          .signOut()
-          .then(() => {
-            this.dispatch('resetUser')
-          })
-      },
-      userUpdate ({ state }, newData) {
-        return firebase.database().ref(`accounts/${state.user.uid}`).update({
-          displayName: newData.displayName
-        })
-      },
-      userUpdateImage ({ state }, image) {
-        return firebase.database().ref(`accounts/${state.user.uid}`).update({
-          image
-        })
-      }
-    },
-    mutations: {
-      ...firebaseMutations,
-      setUser (state, user) {
-        state.user = user
-        return this.dispatch('setAccountRef', `accounts/${state.user.uid}`)
-      }
     }
-  })
 }
 
-export default createStore
+export const actions = {
+    async fetch({ commit }) {
+        try {
+            const data = this.$cookies.get('user')
+            commit('setUser', data)
+            return data
+        }
+        catch (err) {
+            commit('clearUser')
+            commit('setErr', err, { root: true })
+        }
+    },
+    createUser ({state, commit}, {id, email, name, username, avatar = null}) {
+        return new Promise((resolve, reject) => {
+          const registeredAt = Math.floor(Date.now() / 1000)
+          const usernameLower = username.toLowerCase()
+          email = email.toLowerCase()
+          const user = {avatar, email, name, username, usernameLower, registeredAt}
+          firebase.database().ref('users').child(id).set(user)
+            .then(() => {
+              commit('setItem', {resource: 'users', id: id, item: user}, {root: true})
+              resolve(state.items[id])
+            })
+        })
+      },
+    async emailRegister({ commit }, account) {
+        return authentication()
+        .createUserWithEmailAndPassword(account.email, account.password)
+        .then(
+            () => {
+              this.$router.push("/");
+            },
+            error => {
+              this.error = error.message;
+            });
+
+    },
+    async emailSignin({ commit }, account) {
+        return firebase.auth().signInWithEmailAndPassword(account.email, account.password)
+        .then(function (result) {
+            var token = result.credential.accessToken;
+            var user = result.user;
+            commit('setUser', { name: user.displayName, email: user.email, avatar: user.photoURL })
+            vm.$cookies.set('user', { name: user.displayName, email: user.email, avatar: user.photoURL }, { path: '/' })
+            vm.$cookies.set('Authorization', token, { path: '/', maxAge: config.tokenExpiry })
+        }).catch(function (error) {
+            var errorCode = error.code;
+            var email = error.email;
+            var credential = error.credential;
+            commit('setErr', { message: error.message, duration: 15000 }, { root: true })
+        });
+
+    },
+    async emailSignOut({ commit }, payload) {
+        const vm = this
+        authentication.signOut().then(function () {
+            commit('clearUser') // Removes user from Store
+            vm.$cookies.remove('Authorization')
+        }).catch(function (error) {
+            console.error(error);
+        });
+    },
+    async googleSignIn({ commit }) {
+        const vm = this
+        return firebase.auth().signInWithPopup(googleAuthProvider)
+            .then(function (result) {
+                var token = result.credential.accessToken;
+                var user = result.user;
+                commit('setUser', { name: user.displayName, email: user.email, avatar: user.photoURL })
+                vm.$cookies.set('user', { name: user.displayName, email: user.email, avatar: user.photoURL }, { path: '/' })
+                vm.$cookies.set('Authorization', token, { path: '/', maxAge: tokenExpiry })
+            }).catch(function (error) {
+                var errorCode = error.code;
+                var email = error.email;
+                var credential = error.credential;
+                commit('setErr', { message: error.message, duration: 15000 }, { root: true })
+            });
+    },
+    async googleSignOut({ commit }, payload) {
+        const vm = this
+        firebase.auth().signOut().then(function () {
+            commit('clearUser') // Removes user from Store
+            vm.$cookies.remove('Authorization')
+        }).catch(function (error) {
+            console.error(error);
+        });
+    },
+}
