@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 import { config } from '~/.env'
 // import { firebase, googleAuthProvider, authentication } from "~/plugins/firebase";
 import { firestore } from 'firebase';
 import firebase from 'firebase/app'
-=======
-import Vuex from 'vuex'
-import firebase from 'firebase'
-import { vuexfireMutations, firebaseAction } from 'vuexfire'
->>>>>>> 51e5e166d8dac014824f3d917aa136a3d8614427
 
 export const state = () => ({
     user: null,
