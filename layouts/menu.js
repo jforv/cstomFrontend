@@ -1,15 +1,15 @@
 export default {
   items: [
-    // {
-    //   name: 'Login',
-    //   url: '/users/login',
-    //   icon: 'icon-star'
-    // },
-    // {
-    //   name: 'Register',
-    //   url: '/pages/register',
-    //   icon: 'icon-lock'
-    // }
+    {
+      name: 'Patients',
+      url: '/patients/',
+      icon: 'icon-star'
+    },
+    {
+      name: 'Doctors',
+      url: '/doctors/',
+      icon: 'icon-lock'
+    }
   ]
   // items: [
   //   {

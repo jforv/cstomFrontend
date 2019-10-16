@@ -5,15 +5,17 @@ module.exports = {
   mode: 'universal',
   server: {
     port: 8000, // default: 3000
-    host: '0.0.0.0', // default: localhost
+    host: '0.0.0.0' // default: localhost
   },
 
   /*
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
-    meta: [{
+    // title: pkg.name,
+    titleTemplate: '%s - Grace Clinic',
+    meta: [
+      {
         charset: 'utf-8'
       },
       {
@@ -26,7 +28,8 @@ module.exports = {
         content: pkg.description
       }
     ],
-    link: [{
+    link: [
+      {
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
@@ -68,7 +71,7 @@ module.exports = {
    ** Nuxt.js modules
    */
   router: {
-    // middleware: ['authenticated']
+    // middleware: ['guest']
     // middleware: ['auth', 'isLoggedIn']
   },
   modules: [
@@ -82,7 +85,8 @@ module.exports = {
     [
       'nuxt-fontawesome',
       {
-        imports: [{
+        imports: [
+          {
             set: '@fortawesome/free-solid-svg-icons',
             icons: ['fas']
           },
@@ -123,35 +127,35 @@ module.exports = {
   //       }
   //     }
   //   }
-    //   strategies: {
+  //   strategies: {
   //     local: {
-    //       endpoints: {
-      //         login: {
-        //           url: '/method/login',
-        //           method: 'post',
-        //           propertyName: false
-        //         },
-        //       },
-        //       user: {
-          //         url: '/method/frappe.auth.get_logged_user',
-          //         method: 'get',
-          //         propertyName: 'data'
-          //       },
-          //       tokenRequired: false,
-          //       tokenType: false
-          //     }
-          //   }
-        // },
-        
-        // proxy: {
-        //   'api/auth/user': {
-        //     target: 'http://localhost:8000',
-        //     pathRewrite: {
-        //       '^api/auth/user' : '/api/method/login'
-        //       }
-        //     }
-        // },
-        /*
+  //       endpoints: {
+  //         login: {
+  //           url: '/method/login',
+  //           method: 'post',
+  //           propertyName: false
+  //         },
+  //       },
+  //       user: {
+  //         url: '/method/frappe.auth.get_logged_user',
+  //         method: 'get',
+  //         propertyName: 'data'
+  //       },
+  //       tokenRequired: false,
+  //       tokenType: false
+  //     }
+  //   }
+  // },
+
+  // proxy: {
+  //   'api/auth/user': {
+  //     target: 'http://localhost:8000',
+  //     pathRewrite: {
+  //       '^api/auth/user' : '/api/method/login'
+  //       }
+  //     }
+  // },
+  /*
    ** Build configuration
    */
   build: {
@@ -170,4 +174,8 @@ module.exports = {
     //   }
     // }
   }
+  // transition: {
+  //   name: 'page',
+  //   mode: 'out-in'
+  // }
 }
