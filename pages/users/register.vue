@@ -150,11 +150,12 @@
 
 <script>
 import Notification from '~/components/AppNotifications'
+import { mapState, mapGetters, mapActions } from "vuex"
 // import { mapState } from 'vuex'
 export default {
   name: 'Register',
   layout: 'clean',
-  // middleware: 'guest',
+  auth: 'guest',
   components: {
     Notification
   },
@@ -165,21 +166,30 @@ export default {
       name: 'josh',
       password: 'noyose',
       password2: 'noyose',
-      avatar: null,
+      avatar: 'avatar.jpeg',
       error: null
     },
     show: true
   }),
   methods: {
-    async register() {
-      this.$store.dispatch('users/auth/registerUserWithEmailAndPassword', {
-        email: this.account.email,
-        password: this.account.password,
-        name: this.account.name,
-        displayName: this.account.displayName,
-        name: this.account.name,
-        avatar: this.account.avatar
-      })
+    user() {
+      return (this.$store.state.auth || {}).user || null;
+    },
+    methods: {
+    ...mapActions({
+      SignIn: "auth/emailSignIn",
+    }),
+    go(url) {
+      this.$router.push(url);
+    },
+    // async register() {
+    //   this.$store.dispatch('users/auth/registerUserWithEmailAndPassword', {
+    //     email: this.account.email,
+    //     password: this.account.password,
+    //     name: this.account.name,
+    //     username: this.account.displayName,
+    //     avatar: this.account.avatar
+    //   })
     },
     // onReset(evt) {
     //   evt.preventDefault()

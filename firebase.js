@@ -1,8 +1,7 @@
 const pkg = require('./package')
 const config = require('./firebase')
-require('dotenv').config()
+
 module.exports = {
-  env:{
   apiKey: process.env.apiKey,
   authDomain: process.env.authDomain,
   databaseURL: process.env.databaseURL,
@@ -11,7 +10,6 @@ module.exports = {
   messagingSenderId: process.env.messagingSenderId,
   appId: process.env.appId,
   ANALYTICS_TRACKING_ID: process.env.ANALYTICS_TRACKING_ID,
-  },
   clearCart: true, // Whether to clear the cart after order is placed. Useful while testing
   currency: { symbol: '$', code: 'DO' },
   manifest: {

@@ -435,7 +435,7 @@ export default {
   props: {
     fixed: {
       type: Boolean,
-      default: false
+      default: true
     },
     display: {
       type: String,
@@ -443,7 +443,7 @@ export default {
     },
     offCanvas: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
   mounted: function() {

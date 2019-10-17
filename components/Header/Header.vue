@@ -52,6 +52,7 @@
     <button
       class="navbar-toggler aside-menu-toggler d-md-down-none"
       type="button"
+      :class="fixed"
       @click="asideToggle"
     >
       <span class="navbar-toggler-icon" />
@@ -75,9 +76,17 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['isAuthenticated', 'loggedInUser'])
+    ...mapGetters(['isAuthenticated', 'loggedInUser']),
+    goHidden(){
+      console.log('going underground')
+      document.body.classList.toggle('aside-menu-hidden')
+    }
+    // isAuthenticated(){
+    //   return false
+    // }
   },
   mounted: function() {
+    document.body.classList.toggle('aside-menu-hidden'),
     this.isFixed(this.fixed)
     // console.log(mapGetters(['isAuthenticated','loggedInUser']))
   },
@@ -105,7 +114,7 @@ export default {
     },
     asideToggle(e) {
       // e.preventDefault()
-      console.log(e)
+      console.log(document.body.classList)
       document.body.classList.toggle('aside-menu-hidden')
     }
   }

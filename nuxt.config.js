@@ -1,4 +1,5 @@
 const pkg = require('./package')
+// require('dotenv').config()
 
 module.exports = {
   mode: 'universal',
@@ -79,7 +80,7 @@ module.exports = {
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
     // '@nuxtjs/auth',
-    '@nuxtjs/dotenv',
+    // '@nuxtjs/dotenv',
 
     [
       'nuxt-fontawesome',
@@ -100,6 +101,9 @@ module.exports = {
   /*
    ** Axios module configuration
    */
+  env: {
+    apiKey: process.env.apiKey
+  },
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
     baseURL: 'http://18.188.44.149/api'

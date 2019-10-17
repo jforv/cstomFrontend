@@ -37,7 +37,7 @@
                         <b-button variant="link" class="px-0">Forgot password?</b-button>
                       </b-col>
                       <b-col cols="4" class="text-center">
-                        <b-button variant="warning" class="px-4" to="/users/register">Register</b-button>
+                        <b-button variant="warning" class="px-4" to="register">Register</b-button>
                       </b-col>
                     </b-row>
                   </div>
@@ -78,16 +78,18 @@ export default {
   layout: 'clean',
   auth: 'guest',
   data: () => ({
+
     account: {
-      email: 'Administrator',
+      email: 'admin',
       password: 'noyose',
       error: null
     },
-    show: true
+    show: true,
+    // environ: process.env.apiKey.replace(/['"]+/g, '')
   }),
   methods: {
     emailLogin () {
-      this.$store.dispatch('userLogin', {
+      this.$store.dispatch('users/auth/signInUser', {
         email: this.account.email,
         password: this.account.password
       }).then(() => {
