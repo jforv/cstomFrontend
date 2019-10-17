@@ -1,17 +1,20 @@
 <template>
-  <div>index Doctors{{ route}}</div>
+  <div>index Doctors-{{ ruta}}</div>
 </template>
 
 <script>
 export default {
   name: 'index',
   data: () => ({
-    route: ''
+    ruta: 'Doctors'
   }),
+  head: {
+    title: 'Doctors'
+  },
   created() {
     // getRoute({ params }) {
-    console.log(this.$route)
-    // this.route = params.route
+    // console.log(this.$route)
+    this.ruta = this.$route.name
     // }
   }
 }
