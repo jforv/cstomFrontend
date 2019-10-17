@@ -7,6 +7,12 @@ export const state = () => ({
     user: null,
 })
 
+//getters
+export const getters = {
+    isAuthenticated(state){
+        return false
+    }
+}
 // mutations
 export const mutations = {
     setUser(state, data) {
@@ -56,7 +62,6 @@ export const actions = {
             });
 
     },
-<<<<<<< HEAD
     async emailSignin({ commit }, account) {
         return firebase.auth().signInWithEmailAndPassword(account.email, account.password)
         .then(function (result) {
@@ -71,17 +76,15 @@ export const actions = {
             var credential = error.credential;
             commit('setErr', { message: error.message, duration: 15000 }, { root: true })
         });
-=======
-    mutations: {
-      ...vuexfireMutations,
-      setUser (state, user) {
-        state.user = user
-        return this.dispatch('setAccountRef', `accounts/${state.user.uid}`)
-      }
-    }
-  })
-}
->>>>>>> 51e5e166d8dac014824f3d917aa136a3d8614427
+    // mutations: {
+    //   ...vuexfireMutations,
+    //   setUser (state, user) {
+    //     state.user = user
+    //     return this.dispatch('setAccountRef', `accounts/${state.user.uid}`)
+    //   }
+    // }
+//   }
+
 
     },
     async emailSignOut({ commit }, payload) {

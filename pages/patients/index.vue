@@ -1,10 +1,16 @@
 <template>
-  <div>index Patients</div>
+  <div>
+    <patient-table/>
+  </div>
 </template>
 
 <script>
+import patientTable from '~/components/tables'
 export default {
-  name: 'index'
+  name: 'index',
+  components:{
+    patientTable
+  }
 }
 </script>
 
