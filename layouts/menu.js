@@ -3,7 +3,7 @@ export default {
     {
       name: 'Patients',
       url: '/patients/',
-      icon: 'icon-smile'
+      icon: 'icon-people'
     },
     {
       name: 'Doctors',

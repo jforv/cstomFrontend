@@ -78,6 +78,8 @@ const shuffleArray = array => {
 
 export default {
   name: 'CTable',
+  components:{
+  },
   props: {
     caption: {
       type: String,
@@ -309,8 +311,10 @@ export default {
         this.currentPage = 1
       },
       clicked(context){
-        this.$router.push(context.username)
-        console.log(context.username);
+        // this.$router.push(context.username)
+        // this.showSidebar = !this.showSidebar
+        this.$emit('clicked2Show')
+        // console.log(context.username);
         // alert('row clicked')
         
       }
