@@ -6,7 +6,8 @@
         :nav-items="nav" 
         fixed />
       <main class="main">
-        <breadcrumb :list="list"/>
+        <!-- <breadcrumb :list="crumbs"/> -->
+        <b-breadcrumb :items="crumbs"/>
         <div class="container-fluid">
           <nuxt />
         </div>
@@ -38,15 +39,56 @@ export default {
   },
   data() {
     return {
-      nav: nav.items
+      nav: nav.items,
+      // items: [
+      //   {
+      //     text: 'Home',
+      //     href: '/'
+      //   },
+      //   {
+      //     text: 'Patients',
+      //     href: '/patients',
+      //     active: true
+      //   },
+      //   {
+      //     text: 'Library',
+      //     active: true
+      //   }
+      // ]
     }
   },
   computed: {
     name() {
+      // console.log(this.$route.path);
+      
       return this.$route.name
     },
     list() {
+      console.log(this.crumbs);
+      // console.log(this.$route.matched[0]);
+      
       return this.$route.matched
+    },
+     crumbs: function() {
+      let pathArray = this.$route.path.split("/")
+      
+      pathArray.splice(0,1,'Home')
+      // console.log(pathArray);
+      let breadcrumbs = pathArray.reduce((breadcrumbArray, path, idx) => {
+        // console.log(breadcrumbArray);
+        
+        breadcrumbArray.push({
+          path: path,
+          to: breadcrumbArray[idx - 1]
+            ? "/" + path
+            : "/" ,
+          text: path,
+        });
+        return breadcrumbArray;
+      }, [])
+        // console.log('this crumbs');
+      
+      return breadcrumbs;
     }
   }
 }

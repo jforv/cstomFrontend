@@ -1,13 +1,14 @@
 <template>
   <ol class="breadcrumb">
-    <li v-for="(item, index) in list" :key="index" class="breadcrumb-item">
-      <span v-if="isLast(index)" class="active">{{ showName(item) }}</span>
-      <nuxt-link v-else :to="item">{{ showName(item) }}</nuxt-link>
+    <li class="breadcrumb-item" :key="index" v-for="(routeObject, index) in routeRecords">
+      <span class="active" v-if="isLast(index)"> {{ getName(routeObject) }}</span>
+      <router-link :to="routeObject" v-else>Home - {{ getName(routeObject) }}</router-link>
     </li>
   </ol>
 </template>
 
 <script>
+import { log } from 'util'
 export default {
   props: {
     list: {
@@ -16,20 +17,23 @@ export default {
       default: () => []
     }
   },
+  computed: {
+    routeRecords: function () {
+      // console.log(this.list)
+      console.log('asi es');
+      
+      return this.list.filter((route) => route.name || route.meta)
+    }
+  },
   methods: {
-    isLast(index) {
-      return index === this.list.length - 1
+    getName (item) {
+      console.log(item.meta);
+      // return item.meta && item.meta.label ? item.meta.label : item.name || null
+      return item.meta
+      
     },
-    showName(item) {
-      if (item.meta && item.meta.label) {
-        item = item.meta && item.meta.label
-      }
-      if (item.name) {
-        // console.log(item.path)
-        // console.log('from breadcrumbs ' + item)
-        item = item.path
-      }
-      return item
+    isLast (index) {
+      return index === this.list.length - 1
     }
   }
 }
