@@ -70,11 +70,16 @@ export default {
       return this.$route.matched
     },
      crumbs: function() {
-      let pathArray = this.$route.path.split("/")
+      //  console.log(this.$route.path);
+       
+      // let pathArray = this.$route.path.split(/[^\/]\//)
+      let pathArray = this.$route.path.split('/')
       
+      console.log(pathArray);
       pathArray.splice(0,1,'Home')
-      // console.log(pathArray);
-      let breadcrumbs = pathArray.reduce((breadcrumbArray, path, idx) => {
+      var filtered = pathArray.filter((el)=>el != ''); 
+      console.log(filtered);
+      let breadcrumbs = filtered.reduce((breadcrumbArray, path, idx) => {
         // console.log(breadcrumbArray);
         
         breadcrumbArray.push({
@@ -86,7 +91,7 @@ export default {
         });
         return breadcrumbArray;
       }, [])
-        // console.log('this crumbs');
+        console.log(breadcrumbs);
       
       return breadcrumbs;
     }

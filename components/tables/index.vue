@@ -1,8 +1,8 @@
 <template>
   <b-row>
     <b-col>
-      <b-card v-if="show" no-body>
-        <div slot="header">
+      <b-card v-if="show" header="Patient List">
+        <!-- <div slot="header">
           Card with header actions
           <div class="card-header-actions">
             <b-link href="#" class="card-header-action btn-setting">
@@ -15,12 +15,12 @@
               <i class="icon-close"></i>
             </b-link>
           </div>
-        </div>
+        </div> -->
         <!-- <div> -->
         <!-- <font-awesome-icon :icon="['fas', 'align-justify']" />  -->
         <!-- <strong>Patients List</strong>
       <div class="card-actions"></div>
-    </div>
+    </div>-->
     <template>
       <b-row>
         <b-col lg="4" md="6" offset-md="8" class="my-1">
@@ -39,9 +39,10 @@
           </b-form-group>
         </b-col>
       </b-row>
-        </template>-->
+        </template>
         <b-collapse id="collapse1" visible>
           <b-table
+            show-empty
             :hover="hover"
             :striped="striped"
             :small="small"
@@ -136,154 +137,144 @@ export default {
       filterOn: [],
       items: shuffleArray([
         {
+          id: 1,
           username: 'Samppa Nori',
           registered: '2012/01/01',
           role: 'Member',
           status: 'Active'
         },
         {
+          id: 2,
           username: 'Estavan Lykos',
           registered: '2012/02/01',
           role: 'Staff',
           status: 'Banned'
         },
         {
+          id: 3,
           username: 'Chetan Mohamed',
           registered: '2012/02/01',
           role: 'Admin',
           status: 'Inactive'
         },
         {
+          id: 4,
           username: 'Derick Maximinus',
           registered: '2012/03/01',
           role: 'Member',
           status: 'Pending'
         },
         {
+          id: 5,
           username: 'Friderik Dávid',
           registered: '2012/01/21',
           role: 'Staff',
           status: 'Active'
         },
         {
+          id: 6,
           username: 'Yiorgos Avraamu',
           registered: '2012/01/01',
           role: 'Member',
           status: 'Active'
         },
         {
+          id: 7,
           username: 'Avram Tarasios',
           registered: '2012/02/01',
           role: 'Staff',
           status: 'Banned'
         },
         {
+          id: 8,
           username: 'Quintin Ed',
           registered: '2012/02/01',
           role: 'Admin',
           status: 'Inactive'
         },
         {
+          id: 9,
           username: 'Enéas Kwadwo',
           registered: '2012/03/01',
           role: 'Member',
           status: 'Pending'
         },
         {
+          id: 10,
           username: 'Agapetus Tadeáš',
           registered: '2012/01/21',
           role: 'Staff',
           status: 'Active'
         },
         {
+          id: 11,
           username: 'Carwyn Fachtna',
           registered: '2012/01/01',
           role: 'Member',
           status: 'Active'
         },
         {
+          id: 12,
           username: 'Nehemiah Tatius',
           registered: '2012/02/01',
           role: 'Staff',
           status: 'Banned'
         },
         {
+          id: 13,
           username: 'Ebbe Gemariah',
           registered: '2012/02/01',
           role: 'Admin',
           status: 'Inactive'
         },
         {
+          id: 14,
           username: 'Eustorgios Amulius',
           registered: '2012/03/01',
           role: 'Member',
           status: 'Pending'
         },
         {
+          id: 15,
           username: 'Leopold Gáspár',
           registered: '2012/01/21',
           role: 'Staff',
           status: 'Active'
         },
         {
+          id: 16,
           username: 'Pompeius René',
           registered: '2012/01/01',
           role: 'Member',
           status: 'Active'
         },
         {
+          id: 17,
           username: 'Paĉjo Jadon',
           registered: '2012/02/01',
           role: 'Staff',
           status: 'Banned'
         },
         {
+          id: 18,
           username: 'Micheal Mercurius',
           registered: '2012/02/01',
           role: 'Admin',
           status: 'Inactive'
         },
         {
+          id: 19,
           username: 'Ganesha Dubhghall',
           registered: '2012/03/01',
           role: 'Member',
           status: 'Pending'
         },
         {
+          id: 20,
           username: 'Hiroto Šimun',
           registered: '2012/01/21',
           role: 'Staff',
           status: 'Active'
-        },
-        {
-          username: 'Vishnu Serghei',
-          registered: '2012/01/01',
-          role: 'Member',
-          status: 'Active'
-        },
-        {
-          username: 'Zbyněk Phoibos',
-          registered: '2012/02/01',
-          role: 'Staff',
-          status: 'Banned'
-        },
-        {
-          username: 'Einar Randall',
-          registered: '2012/02/01',
-          role: 'Admin',
-          status: 'Inactive'
-        },
-        {
-          username: 'Félix Troels',
-          registered: '2012/03/21',
-          role: 'Staff',
-          status: 'Active'
-        },
-        {
-          username: 'Aulus Agmundr',
-          registered: '2012/01/01',
-          role: 'Member',
-          status: 'Pending'
         }
       ]),
       fields: [
@@ -329,13 +320,23 @@ export default {
       this.totalRows = filteredItems.length
       this.currentPage = 1
     },
-    clicked(context) {
+    clicked(item) {
       // this.$router.push(context.username)
-      // this.showSidebar = !this.showSidebar
+      // this.showSidebar = !this.showSidebar'
+      // let thiId = context.filter((item)=>({
+      //     item.id == 
+      // }))
       this.$emit('clicked2Show')
-      // console.log(context.username);
+      this.$router.push('/patients/'+item.id)
+      console.log(item.id);
       // alert('row clicked')
     }
   }
 }
 </script>
+<style lang="scss" >
+.table-hover tbody tr:hover {
+    color: #080808;
+    background-color: rgba(58, 163, 207, 0.33);
+}
+</style>
