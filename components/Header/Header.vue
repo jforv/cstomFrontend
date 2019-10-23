@@ -50,13 +50,28 @@
       <HeaderDropdown />
     </b-navbar-nav>
     <button
+      class="navbar-toggler aside-menu-toggler aside-menu-show"
+      type="button"
+      data-toggle="aside-menu-show"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- <button
       class="navbar-toggler aside-menu-toggler d-md-down-none"
       type="button"
       :class="fixed"
       @click="asideToggle"
     >
       <span class="navbar-toggler-icon" />
-    </button>
+    </button>-->
+    <!-- <button
+      class="navbar-toggler aside-menu-toggler d-md-down-none"
+      type="button"
+      :class="fixed"
+      @click="asideToggle"
+    >
+      <span class="navbar-toggler-icon" />
+    </button>-->
   </header>
 </template>
 
@@ -77,7 +92,7 @@ export default {
   },
   computed: {
     ...mapGetters(['isAuthenticated', 'loggedInUser']),
-    goHidden(){
+    goHidden() {
       console.log('going underground')
       document.body.classList.toggle('aside-menu-hidden')
     }
@@ -87,7 +102,7 @@ export default {
   },
   mounted: function() {
     document.body.classList.toggle('aside-menu-hidden'),
-    this.isFixed(this.fixed)
+      this.isFixed(this.fixed)
     // console.log(mapGetters(['isAuthenticated','loggedInUser']))
   },
   methods: {

@@ -2,19 +2,17 @@
   <div class="app">
     <AppHeader fixed />
     <div class="app-body">
-      <Sidebar 
-        :nav-items="nav" 
-        fixed />
+      <Sidebar :nav-items="nav" fixed />
       <main class="main">
         <!-- <breadcrumb :list="crumbs"/> -->
-        <b-breadcrumb :items="crumbs"/>
+        <b-breadcrumb :items="crumbs" />
         <div class="container-fluid">
           <nuxt />
         </div>
       </main>
-      <AppAside fixed/>
+      <AppAside fixed />
     </div>
-    <AppFooter/>
+    <AppFooter />
   </div>
 </template>
 
@@ -23,11 +21,10 @@ import nav from './menu'
 import {
   Header as AppHeader,
   Sidebar,
-  Aside as AppAside,
   Footer as AppFooter,
   Breadcrumb
 } from '~/components/'
-
+import AppAside from '~/components/CustomAside'
 export default {
   name: 'Full',
   components: {
@@ -39,7 +36,7 @@ export default {
   },
   data() {
     return {
-      nav: nav.items,
+      nav: nav.items
       // items: [
       //   {
       //     text: 'Home',
@@ -60,40 +57,38 @@ export default {
   computed: {
     name() {
       // console.log(this.$route.path);
-      
+
       return this.$route.name
     },
     list() {
-      console.log(this.crumbs);
+      console.log(this.crumbs)
       // console.log(this.$route.matched[0]);
-      
+
       return this.$route.matched
     },
-     crumbs: function() {
+    crumbs: function() {
       //  console.log(this.$route.path);
-       
+
       // let pathArray = this.$route.path.split(/[^\/]\//)
       let pathArray = this.$route.path.split('/')
-      
-      console.log(pathArray);
-      pathArray.splice(0,1,'Home')
-      var filtered = pathArray.filter((el)=>el != ''); 
-      console.log(filtered);
+
+      console.log(pathArray)
+      pathArray.splice(0, 1, 'Home')
+      var filtered = pathArray.filter(el => el != '')
+      console.log(filtered)
       let breadcrumbs = filtered.reduce((breadcrumbArray, path, idx) => {
         // console.log(breadcrumbArray);
-        
+
         breadcrumbArray.push({
           path: path,
-          to: breadcrumbArray[idx - 1]
-            ? "/" + path
-            : "/" ,
-          text: path,
-        });
-        return breadcrumbArray;
+          to: breadcrumbArray[idx - 1] ? '/' + path : '/',
+          text: path
+        })
+        return breadcrumbArray
       }, [])
-        console.log(breadcrumbs);
-      
-      return breadcrumbs;
+      console.log(breadcrumbs)
+
+      return breadcrumbs
     }
   }
 }

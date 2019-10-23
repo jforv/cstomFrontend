@@ -15,30 +15,30 @@
               <i class="icon-close"></i>
             </b-link>
           </div>
-        </div> -->
+        </div>-->
         <!-- <div> -->
         <!-- <font-awesome-icon :icon="['fas', 'align-justify']" />  -->
         <!-- <strong>Patients List</strong>
       <div class="card-actions"></div>
-    </div>-->
-    <template>
-      <b-row>
-        <b-col lg="4" md="6" offset-md="8" class="my-1">
-          <b-form-group>
-            <b-input-group size="sm">
-              <b-form-input
-                v-model="filter"
-                type="search"
-                id="filterInput"
-                placeholder="Type to Search"
-              ></b-form-input>
-              <b-input-group-append>
-                <b-button :disabled="!filter" @click="filter = ''">Clear</b-button>
-              </b-input-group-append>
-            </b-input-group>
-          </b-form-group>
-        </b-col>
-      </b-row>
+        </div>-->
+        <template>
+          <b-row>
+            <b-col lg="4" md="4" sm="4" offset-md="8" class="my-1">
+              <b-form-group>
+                <b-input-group size="sm">
+                  <b-form-input
+                    v-model="filter"
+                    type="search"
+                    id="filterInput"
+                    placeholder="Type to Search"
+                  ></b-form-input>
+                  <b-input-group-append>
+                    <b-button :disabled="!filter" @click="filter = ''">Clear</b-button>
+                  </b-input-group-append>
+                </b-input-group>
+              </b-form-group>
+            </b-col>
+          </b-row>
         </template>
         <b-collapse id="collapse1" visible>
           <b-table
@@ -324,11 +324,11 @@ export default {
       // this.$router.push(context.username)
       // this.showSidebar = !this.showSidebar'
       // let thiId = context.filter((item)=>({
-      //     item.id == 
+      //     item.id ==
       // }))
       this.$emit('clicked2Show')
-      this.$router.push('/patients/'+item.id)
-      console.log(item.id);
+      this.$router.push('/patients/' + item.id)
+      console.log(item.id)
       // alert('row clicked')
     }
   }
@@ -336,7 +336,7 @@ export default {
 </script>
 <style lang="scss" >
 .table-hover tbody tr:hover {
-    color: #080808;
-    background-color: rgba(58, 163, 207, 0.33);
+  color: #080808;
+  background-color: rgba(58, 163, 207, 0.33);
 }
 </style>

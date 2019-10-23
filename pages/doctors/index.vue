@@ -1,24 +1,24 @@
 <template>
   <div>
-    <Aside v-if="showAside" @clicked2Show="makeShowAside"/>
-    <doctor-table/>
+    <Aside v-if="showAside" @clicked2Show="makeShowAside" />
+    <doctor-table />
   </div>
 </template>
 
 <script>
 import doctorTable from '~/components/tables'
-import {Aside as AppAside} from '~/components/'
+// import {Aside as AppAside} from '~/components/'
 export default {
   name: 'index',
-  data:()=>({
+  data: () => ({
     showAside: true
   }),
-  components:{
-    doctorTable,
-    AppAside
+  components: {
+    doctorTable
+    // AppAside
   },
-  methods:{
-    makeShowAside(){
+  methods: {
+    makeShowAside() {
       console.log('make it shows')
       this.showAside = !this.showAside
     }
