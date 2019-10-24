@@ -1,7 +1,7 @@
 <template>
   <b-row>
     <b-col>
-      <b-card v-if="show" header="Patient List">
+      <b-card v-if="show" :header="header">
         <!-- <div slot="header">
           Card with header actions
           <div class="card-header-actions">
@@ -125,6 +125,10 @@ export default {
     fixed: {
       type: Boolean,
       default: false
+    },
+    header: {
+      type: String
+      // default: 'List'
     }
   },
   data: () => {

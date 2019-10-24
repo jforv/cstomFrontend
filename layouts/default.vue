@@ -61,7 +61,7 @@ export default {
       return this.$route.name
     },
     list() {
-      console.log(this.crumbs)
+      // console.log(this.crumbs)
       // console.log(this.$route.matched[0]);
 
       return this.$route.matched
@@ -72,10 +72,10 @@ export default {
       // let pathArray = this.$route.path.split(/[^\/]\//)
       let pathArray = this.$route.path.split('/')
 
-      console.log(pathArray)
+      // console.log(pathArray)
       pathArray.splice(0, 1, 'Home')
       var filtered = pathArray.filter(el => el != '')
-      console.log(filtered)
+      // console.log(filtered)
       let breadcrumbs = filtered.reduce((breadcrumbArray, path, idx) => {
         // console.log(breadcrumbArray);
 
@@ -86,7 +86,7 @@ export default {
         })
         return breadcrumbArray
       }, [])
-      console.log(breadcrumbs)
+      // console.log(breadcrumbs)
 
       return breadcrumbs
     }

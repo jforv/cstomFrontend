@@ -53,6 +53,7 @@
       class="navbar-toggler aside-menu-toggler aside-menu-show"
       type="button"
       data-toggle="aside-menu-show"
+      @click="asideToggle"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -78,6 +79,12 @@
 <script>
 import HeaderDropdown from './HeaderDropdown.vue'
 import { mapGetters } from 'vuex'
+import {
+  asideMenuCssClasses,
+  validBreakpoints,
+  checkBreakpoint
+} from '@/utils/classes'
+import { toggleClasses } from '@/utils/toggleClasses'
 
 export default {
   name: 'CHeader',
@@ -88,21 +95,37 @@ export default {
     fixed: {
       type: Boolean,
       default: false
+    },
+    defaultOpen: {
+      type: Boolean,
+      default: false
+    },
+    display: {
+      type: String,
+      default: 'lg'
+    },
+    mobile: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
     ...mapGetters(['isAuthenticated', 'loggedInUser']),
-    goHidden() {
-      console.log('going underground')
-      document.body.classList.toggle('aside-menu-hidden')
+    // goHidden() {
+    //   console.log('going underground')
+    //   document.body.classList.toggle('aside-menu-hidden')
+    // },
+    classList() {
+      return ['navbar-toggler']
     }
     // isAuthenticated(){
     //   return false
     // }
   },
   mounted: function() {
-    document.body.classList.toggle('aside-menu-hidden'),
-      this.isFixed(this.fixed)
+    this.toggle(this.defaultOpen)
+    this.isFixed(this.fixed)
+    // console.log(document.body.classList)
     // console.log(mapGetters(['isAuthenticated','loggedInUser']))
   },
   methods: {
@@ -127,11 +150,31 @@ export default {
       e.preventDefault()
       document.body.classList.toggle('sidebar-mobile-show')
     },
+    toggle(force) {
+      const [display, mobile] = [this.display, this.mobile]
+      let cssClass = asideMenuCssClasses[0]
+      console.log(cssClass)
+      console.log(display)
+      toggleClasses(cssClass, asideMenuCssClasses, force)
+
+      if (!mobile && display && checkBreakpoint(display, validBreakpoints)) {
+        cssClass = `aside-menu-${display}-show`
+        console.log('toggled and passed the if')
+        console.log(cssClass, asideMenuCssClasses, force)
+      }
+    },
     asideToggle(e) {
-      // e.preventDefault()
-      console.log(document.body.classList)
-      document.body.classList.toggle('aside-menu-hidden')
+      e.preventDefault()
+      // console.log(e)
+      // document.body.classList.toggle('aside-menu-hidden'),
+      this.toggle()
     }
   }
+  // asideToggle(e) {
+  //   // e.preventDefault()
+  //   console.log(document.body.classList)
+  //   document.body.classList.toggle('aside-menu-hidden')
+  // }
+  // }
 }
 </script>
